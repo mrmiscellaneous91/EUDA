@@ -6,11 +6,11 @@ const nextConfig: NextConfig = {
         return [
             {
                 source: '/tax-calculator/spain',
-                destination: `${taxCalcUrl}/`,
+                destination: `${taxCalcUrl}/tax-calculator/spain/`,
             },
             {
                 source: '/tax-calculator/spain/:path*',
-                destination: `${taxCalcUrl}/:path*`,
+                destination: `${taxCalcUrl}/tax-calculator/spain/:path*`,
             },
         ];
     },
