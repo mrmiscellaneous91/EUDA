@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 120" width="960" height="360">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&amp;display=swap');
+      .wordmark {
+        font-family: 'Manrope', sans-serif;
+        font-size: 48px;
+        font-weight: 700;
+        letter-spacing: -1px;
+        fill: #111111;
+      }
+      .symbol-text {
+        font-family: 'Manrope', sans-serif;
+        font-size: 28px;
+        font-weight: 800;
+        fill: #ffffff;
+      }
+    </style>
+    <linearGradient id="greenGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00d4aa"/>
+      <stop offset="100%" style="stop-color:#00a389"/>
+    </linearGradient>
+  </defs>
+  <!-- Symbol box -->
+  <rect x="30" y="32" width="56" height="56" rx="14" fill="url(#greenGradient)"/>
+  <!-- E letter in symbol -->
+  <text x="58" y="72" text-anchor="middle" class="symbol-text">E</text>
+  <!-- Wordmark -->
+  <text x="104" y="76" class="wordmark">euda</text>
+</svg>

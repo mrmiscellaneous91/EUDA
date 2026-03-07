@@ -1,0 +1,367 @@
+[
+  {
+    "name": "General public services",
+    "percentage": 0.121,
+    "description": "Funding for government operations, diplomacy, and servicing the national debt.",
+    "subcategories": [
+      {
+        "name": "Executive & legislative organs",
+        "percentage": 0.03,
+        "description": "Parliament, ministries, embassies, and tax collection."
+      },
+      {
+        "name": "Foreign economic aid",
+        "percentage": 0.002,
+        "description": "International development assistance and humanitarian programs."
+      },
+      {
+        "name": "General services",
+        "percentage": 0.023,
+        "description": "Shared administrative services across government."
+      },
+      {
+        "name": "Basic research",
+        "percentage": 0.012,
+        "description": "Fundamental scientific research not tied to specific applications."
+      },
+      {
+        "name": "R&D General public services",
+        "percentage": 0,
+        "description": "Research to improve government efficiency."
+      },
+      {
+        "name": "General public services n.e.c.",
+        "percentage": 0.002,
+        "description": "Other general government services not classified elsewhere."
+      },
+      {
+        "name": "Public debt interest",
+        "percentage": 0.053,
+        "description": "Interest payments on Spain's national debt."
+      }
+    ]
+  },
+  {
+    "name": "Defense",
+    "percentage": 0.021,
+    "description": "National security through military forces and international defense cooperation.",
+    "subcategories": [
+      {
+        "name": "Military defense",
+        "percentage": 0.018,
+        "description": "Armed forces operations, equipment, and personnel."
+      },
+      {
+        "name": "Foreign military aid",
+        "percentage": 0.003,
+        "description": "Military assistance to allied nations and NATO contributions."
+      },
+      {
+        "name": "R&D Defense",
+        "percentage": 0.001,
+        "description": "Development of new defense technologies and systems."
+      }
+    ]
+  },
+  {
+    "name": "Public order & safety",
+    "percentage": 0.04,
+    "description": "Maintaining law, order, and public safety across Spain.",
+    "subcategories": [
+      {
+        "name": "Police services",
+        "percentage": 0.025,
+        "description": "National Police, Guardia Civil, and local police forces."
+      },
+      {
+        "name": "Fire-protection services",
+        "percentage": 0.004,
+        "description": "Fire brigades and emergency rescue services."
+      },
+      {
+        "name": "Law courts",
+        "percentage": 0.008,
+        "description": "Courts, judges, and the judicial administration system."
+      },
+      {
+        "name": "Prisons",
+        "percentage": 0.003,
+        "description": "Correctional facilities and rehabilitation programs."
+      },
+      {
+        "name": "Public order & safety n.e.c.",
+        "percentage": 0,
+        "description": "Other public safety services not classified elsewhere."
+      }
+    ]
+  },
+  {
+    "name": "Economic affairs",
+    "percentage": 0.105,
+    "description": "Supporting economic growth through infrastructure, industry, and job programs.",
+    "subcategories": [
+      {
+        "name": "General economic & labor affairs",
+        "percentage": 0.025,
+        "description": "Economic regulation, labor market policies, and employment services."
+      },
+      {
+        "name": "Agriculture forestry fishing",
+        "percentage": 0.011,
+        "description": "Support for farmers, rural development, and fishing communities."
+      },
+      {
+        "name": "Fuel & energy",
+        "percentage": 0.006,
+        "description": "Energy infrastructure and renewable energy transition."
+      },
+      {
+        "name": "Industry construction",
+        "percentage": 0.004,
+        "description": "Industrial policy and construction sector support."
+      },
+      {
+        "name": "Transport",
+        "percentage": 0.04,
+        "description": "Roads, railways, airports, and public transit systems."
+      },
+      {
+        "name": "Communications",
+        "percentage": 0.004,
+        "description": "Telecommunications infrastructure and digital connectivity."
+      },
+      {
+        "name": "Other economic affairs",
+        "percentage": 0.005,
+        "description": "Tourism promotion and other economic development programs."
+      },
+      {
+        "name": "R&D Economic affairs",
+        "percentage": 0.008,
+        "description": "Research to boost economic competitiveness and innovation."
+      }
+    ]
+  },
+  {
+    "name": "Environmental protection",
+    "percentage": 0.022,
+    "description": "Protecting Spain's natural environment and fighting climate change.",
+    "subcategories": [
+      {
+        "name": "Waste management",
+        "percentage": 0.013,
+        "description": "Collection, recycling, and disposal of municipal waste."
+      },
+      {
+        "name": "Waste water management",
+        "percentage": 0.003,
+        "description": "Sewage treatment and water quality protection."
+      },
+      {
+        "name": "Pollution abatement",
+        "percentage": 0.001,
+        "description": "Reducing air, water, and soil pollution."
+      },
+      {
+        "name": "Biodiversity & landscape",
+        "percentage": 0.003,
+        "description": "Protection of natural habitats and wildlife conservation."
+      },
+      {
+        "name": "Environmental protection n.e.c.",
+        "percentage": 0.002,
+        "description": "Other environmental programs including climate action."
+      }
+    ]
+  },
+  {
+    "name": "Housing & community amenities",
+    "percentage": 0.012,
+    "description": "Building communities through housing, water supply, and urban development.",
+    "subcategories": [
+      {
+        "name": "Housing development",
+        "percentage": 0.005,
+        "description": "Social housing construction and housing assistance programs."
+      },
+      {
+        "name": "Community development",
+        "percentage": 0.001,
+        "description": "Urban planning and neighborhood improvement projects."
+      },
+      {
+        "name": "Water supply",
+        "percentage": 0.003,
+        "description": "Clean drinking water infrastructure and distribution."
+      },
+      {
+        "name": "Street lighting",
+        "percentage": 0.003,
+        "description": "Public lighting for roads, parks, and public spaces."
+      },
+      {
+        "name": "Housing & community n.e.c.",
+        "percentage": 0,
+        "description": "Other housing and community services."
+      }
+    ]
+  },
+  {
+    "name": "Health",
+    "percentage": 0.142,
+    "description": "Universal healthcare through Spain's public health system.",
+    "subcategories": [
+      {
+        "name": "Medical products & equipment",
+        "percentage": 0.021,
+        "description": "Medicines, vaccines, and medical devices."
+      },
+      {
+        "name": "Outpatient services",
+        "percentage": 0.051,
+        "description": "Primary care, specialist consultations, and clinics."
+      },
+      {
+        "name": "Hospital services",
+        "percentage": 0.06,
+        "description": "Public hospitals, surgeries, and inpatient care."
+      },
+      {
+        "name": "Public health services",
+        "percentage": 0.003,
+        "description": "Disease prevention, vaccination campaigns, and health education."
+      },
+      {
+        "name": "R&D Health",
+        "percentage": 0.006,
+        "description": "Medical research and drug development."
+      },
+      {
+        "name": "Health n.e.c.",
+        "percentage": 0.001,
+        "description": "Other health services including mental health programs."
+      }
+    ]
+  },
+  {
+    "name": "Recreation culture & religion",
+    "percentage": 0.027,
+    "description": "Enriching lives through sports, arts, culture, and heritage preservation.",
+    "subcategories": [
+      {
+        "name": "Sport & recreation services",
+        "percentage": 0.01,
+        "description": "Public sports facilities and recreational programs."
+      },
+      {
+        "name": "Cultural services",
+        "percentage": 0.011,
+        "description": "Museums, libraries, theaters, and cultural events."
+      },
+      {
+        "name": "Broadcasting & publishing",
+        "percentage": 0.004,
+        "description": "Public broadcasting (RTVE) and media services."
+      },
+      {
+        "name": "Religious & community services",
+        "percentage": 0.001,
+        "description": "Heritage site maintenance and community gatherings."
+      },
+      {
+        "name": "Recreation culture n.e.c.",
+        "percentage": 0.001,
+        "description": "Other cultural and recreational services."
+      }
+    ]
+  },
+  {
+    "name": "Education",
+    "percentage": 0.092,
+    "description": "Investing in Spain's future through public education at all levels.",
+    "subcategories": [
+      {
+        "name": "Pre-primary & primary education",
+        "percentage": 0.035,
+        "description": "Nursery schools and primary education (ages 3-12)."
+      },
+      {
+        "name": "Secondary education",
+        "percentage": 0.036,
+        "description": "ESO and Bachillerato (ages 12-18)."
+      },
+      {
+        "name": "Tertiary education",
+        "percentage": 0.013,
+        "description": "Public universities and higher education."
+      },
+      {
+        "name": "Education not definable by level",
+        "percentage": 0.001,
+        "description": "Adult education and lifelong learning."
+      },
+      {
+        "name": "Subsidiary services to education",
+        "percentage": 0.003,
+        "description": "School meals, transport, and student support."
+      },
+      {
+        "name": "R&D Education",
+        "percentage": 0.002,
+        "description": "Educational research and curriculum development."
+      },
+      {
+        "name": "Education n.e.c.",
+        "percentage": 0.003,
+        "description": "Other educational services and programs."
+      }
+    ]
+  },
+  {
+    "name": "Social protection",
+    "percentage": 0.417,
+    "description": "The social safety net: pensions, unemployment benefits, and family support.",
+    "subcategories": [
+      {
+        "name": "Sickness & disability",
+        "percentage": 0.06,
+        "description": "Disability pensions and sick leave benefits."
+      },
+      {
+        "name": "Old age (pensions)",
+        "percentage": 0.23,
+        "description": "State retirement pensions for seniors."
+      },
+      {
+        "name": "Survivors",
+        "percentage": 0.051,
+        "description": "Widow/widower and orphan pensions."
+      },
+      {
+        "name": "Family & children",
+        "percentage": 0.022,
+        "description": "Child benefits, parental leave, and family support."
+      },
+      {
+        "name": "Unemployment",
+        "percentage": 0.035,
+        "description": "Unemployment benefits and job-seeking support."
+      },
+      {
+        "name": "Housing",
+        "percentage": 0.001,
+        "description": "Housing allowances for low-income families."
+      },
+      {
+        "name": "Social exclusion",
+        "percentage": 0.015,
+        "description": "Programs combating poverty and social marginalization."
+      },
+      {
+        "name": "Social protection n.e.c.",
+        "percentage": 0.003,
+        "description": "Other social welfare services."
+      }
+    ]
+  }
+]

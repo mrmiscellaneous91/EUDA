@@ -1,0 +1,2362 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-13T15:30:10.246Z\n"
+"PO-Revision-Date: 2026-02-13T15:30:10.246Z\n"
+"Last-Translator: \n"
+"Language: es\n"
+"Language-Team: \n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n == 1 ? 0 : 1;\n"
+"Source-Language: en\n"
+"MIME-Version: 1.0\n"
+
+#. placeholder {0}: breakdown.totalTax.toLocaleString()
+#: src/App.tsx
+msgid ""
+"I contributed €{0} to Spanish public services! 🇪🇸\n"
+"See where your tax goes:"
+msgstr ""
+"¡He contribuido con €{0} a los servicios públicos españoles! 🇪🇸\n"
+"Mira a dónde van tus impuestos:"
+
+#: src/App.tsx
+msgid "Tax Spend Calculator"
+msgstr "Calculadora de Gasto de Impuestos"
+
+#: src/App.tsx
+msgid "Result copied to clipboard!"
+msgstr "¡Resultado copiado al portapapeles!"
+
+#: src/lib/taxCalculations.ts
+msgid "Low income"
+msgstr "Ingresos bajos"
+
+#: src/lib/taxCalculations.ts
+msgid "Lower-middle income"
+msgstr "Ingresos medios-bajos"
+
+#: src/lib/taxCalculations.ts
+msgid "Middle income"
+msgstr "Ingresos medios"
+
+#: src/lib/taxCalculations.ts
+msgid "Upper-middle income"
+msgstr "Ingresos medios-altos"
+
+#: src/lib/taxCalculations.ts
+msgid "High income"
+msgstr "Ingresos altos"
+
+#~ msgid "#C65D3B"
+#~ msgstr ""
+
+#~ msgid "#6B7E4B"
+#~ msgstr ""
+
+#~ msgid "#8B3A4C"
+#~ msgstr ""
+
+#~ msgid "#D4A847"
+#~ msgstr ""
+
+#~ msgid "#4A7B8C"
+#~ msgstr ""
+
+#~ msgid "#A67C52"
+#~ msgstr ""
+
+#~ msgid "#556B2F"
+#~ msgstr ""
+
+#~ msgid "#CD853F"
+#~ msgstr ""
+
+#~ msgid "#8FBC8F"
+#~ msgstr ""
+
+#: src/App.tsx
+#: src/App.tsx
+#: src/App.tsx
+msgid "autonomo"
+msgstr ""
+
+#: src/App.tsx
+#: src/App.tsx
+msgid "yearly"
+msgstr ""
+
+#: src/App.tsx
+#: src/App.tsx
+#: src/App.tsx
+msgid "bar"
+msgstr ""
+
+#: src/App.tsx
+#: src/App.tsx
+#: src/App.tsx
+#: src/App.tsx
+#: src/App.tsx
+#: src/App.tsx
+msgid "en"
+msgstr ""
+
+#. placeholder {0}: text
+#. placeholder {1}: url
+#: src/App.tsx
+msgid "{0} {1}"
+msgstr ""
+
+#: src/App.tsx
+#: src/lib/taxCalculations.ts
+msgid "monthly"
+msgstr ""
+
+#: src/App.tsx
+#: src/lib/taxCalculations.ts
+msgid "employee"
+msgstr ""
+
+#~ msgid "min-h-screen bg-background text-foreground selection:bg-primary/20 pb-8 flex flex-col"
+#~ msgstr ""
+
+#~ msgid "border-b border-border/40 bg-card/30 backdrop-blur-md sticky top-0 z-50"
+#~ msgstr ""
+
+#~ msgid "max-w-6xl mx-auto px-6 h-20 flex items-center justify-between"
+#~ msgstr ""
+
+#~ msgid "flex items-center gap-3"
+#~ msgstr ""
+
+#~ msgid "flex items-center gap-4"
+#~ msgstr ""
+
+#: src/App.tsx
+#: src/App.tsx
+msgid "/generationrent_logo.svg"
+msgstr ""
+
+#: src/App.tsx
+msgid "Generation Rent"
+msgstr ""
+
+#~ msgid "h-10 w-auto"
+#~ msgstr ""
+
+#~ msgid "w-px h-8 bg-border/40"
+#~ msgstr ""
+
+#~ msgid "flex items-center gap-2"
+#~ msgstr ""
+
+#~ msgid "text-xl font-bold tracking-tight"
+#~ msgstr ""
+
+#: src/App.tsx
+msgid "Where do your taxes really go?"
+msgstr "¿A dónde van realmente tus impuestos?"
+
+#~ msgid "text-2xl"
+#~ msgstr ""
+
+#: src/App.tsx
+msgid "Spain"
+msgstr ""
+
+#: src/App.tsx
+msgid "🇪🇸"
+msgstr ""
+
+#: src/App.tsx
+#: src/App.tsx
+#: src/App.tsx
+#: src/App.tsx
+#: src/App.tsx
+#: src/App.tsx
+#: src/App.tsx
+#: src/App.tsx
+#: src/App.tsx
+msgid "es"
+msgstr ""
+
+#~ msgid "px-3 py-1.5 rounded-full border border-border/40 hover:bg-card/50 transition-all text-sm font-medium flex items-center gap-2"
+#~ msgstr ""
+
+#: src/App.tsx
+msgid "Change to Spanish"
+msgstr ""
+
+#: src/App.tsx
+msgid "Cambiar a Inglés"
+msgstr ""
+
+#: src/App.tsx
+msgid "EN"
+msgstr ""
+
+#: src/App.tsx
+msgid "ES"
+msgstr ""
+
+#~ msgid "flex items-center gap-2 px-4 py-2 rounded-full bg-primary text-primary-foreground hover:opacity-90 transition-all shadow-sm font-medium text-sm"
+#~ msgstr ""
+
+#: src/App.tsx
+msgid ""
+"\n"
+"Share Result\n"
+""
+msgstr ""
+"\n"
+"Compartir Resultado\n"
+""
+
+#~ msgid "max-w-6xl mx-auto px-6 py-12 space-y-12"
+#~ msgstr ""
+
+#~ msgid "grid lg:grid-cols-12 gap-12"
+#~ msgstr ""
+
+#~ msgid "lg:col-span-4 space-y-8"
+#~ msgstr ""
+
+#~ msgid "space-y-6"
+#~ msgstr ""
+
+#~ msgid "space-y-2"
+#~ msgstr ""
+
+#~ msgid "text-2xl font-bold"
+#~ msgstr ""
+
+#: src/App.tsx
+msgid "Calculate your impact"
+msgstr "Calcula tu impacto"
+
+#~ msgid "text-muted-foreground"
+#~ msgstr ""
+
+#: src/App.tsx
+msgid "See exactly where your tax and social security contributions go."
+msgstr ""
+
+#~ msgid "p-1 bg-muted rounded-2xl flex gap-1"
+#~ msgstr ""
+
+#~ msgid "flex-1 py-3 px-4 rounded-xl text-sm font-semibold transition-all"
+#~ msgstr ""
+
+#~ msgid "bg-card text-foreground shadow-sm"
+#~ msgstr ""
+
+#~ msgid "text-muted-foreground hover:text-foreground"
+#~ msgstr ""
+
+#: src/App.tsx
+msgid ""
+"\n"
+"Autonomo\n"
+""
+msgstr ""
+
+#: src/App.tsx
+msgid ""
+"\n"
+"Employee\n"
+""
+msgstr ""
+
+#~ msgid "space-y-4"
+#~ msgstr ""
+
+#~ msgid "relative group"
+#~ msgstr ""
+
+#~ msgid "absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground group-focus-within:text-primary transition-colors"
+#~ msgstr ""
+
+#~ msgid "number"
+#~ msgstr ""
+
+#: src/App.tsx
+msgid "Earnings..."
+msgstr ""
+
+#~ msgid "w-full bg-card border-2 border-border/50 rounded-2xl py-6 pl-12 pr-28 text-2xl font-bold focus:border-primary focus:ring-0 transition-all outline-none"
+#~ msgstr ""
+
+#~ msgid "absolute right-3 top-3 bottom-3 flex gap-1 bg-muted p-1 rounded-xl"
+#~ msgstr ""
+
+#~ msgid "px-3 text-xs font-bold rounded-lg transition-all"
+#~ msgstr ""
+
+#~ msgid "bg-card text-primary shadow-sm"
+#~ msgstr ""
+
+#: src/App.tsx
+msgid ""
+"\n"
+"/ mo\n"
+""
+msgstr ""
+
+#: src/App.tsx
+msgid ""
+"\n"
+"/ yr\n"
+""
+msgstr ""
+
+#~ msgid "bg-primary/5 border border-primary/20 rounded-3xl p-8 space-y-6"
+#~ msgstr ""
+
+#~ msgid "flex justify-between items-baseline"
+#~ msgstr ""
+
+#~ msgid "text-sm font-bold text-muted-foreground uppercase tracking-widest"
+#~ msgstr ""
+
+#: src/App.tsx
+msgid "Total Contribution"
+msgstr "Contribución Total"
+
+#~ msgid "text-4xl font-black text-primary"
+#~ msgstr ""
+
+#~ msgid "h-px bg-primary/20"
+#~ msgstr ""
+
+#~ msgid "space-y-3"
+#~ msgstr ""
+
+#~ msgid "flex justify-between text-sm"
+#~ msgstr ""
+
+#~ msgid "text-muted-foreground font-medium"
+#~ msgstr ""
+
+#: src/App.tsx
+msgid "Income Tax (IRPF)"
+msgstr ""
+
+#~ msgid "font-bold"
+#~ msgstr ""
+
+#: src/App.tsx
+msgid "Social Security"
+msgstr ""
+
+#~ msgid "pt-2"
+#~ msgstr ""
+
+#~ msgid "flex justify-between text-lg font-bold"
+#~ msgstr ""
+
+#~ msgid "text-foreground"
+#~ msgstr ""
+
+#: src/App.tsx
+msgid "Net Take Home"
+msgstr "Sueldo Neto"
+
+#~ msgid "text-success"
+#~ msgstr ""
+
+#~ msgid "bg-muted/30 rounded-2xl overflow-hidden"
+#~ msgstr ""
+
+#~ msgid "w-full p-6 flex items-center justify-between text-left hover:bg-muted/40 transition-colors"
+#~ msgstr ""
+
+#~ msgid "font-bold text-foreground flex items-center gap-2 text-sm"
+#~ msgstr ""
+
+#~ msgid "text-primary"
+#~ msgstr ""
+
+#: src/App.tsx
+msgid ""
+"\n"
+"How Your Contribution is Calculated\n"
+""
+msgstr ""
+
+#~ msgid "px-6 pb-6 space-y-5 text-sm"
+#~ msgstr ""
+
+#~ msgid "space-y-5"
+#~ msgstr ""
+
+#: src/App.tsx
+msgid "Step 1: 7% Expense Deduction"
+msgstr ""
+
+#~ msgid "bg-card/50 rounded-xl p-4 space-y-2 font-mono text-xs"
+#~ msgstr ""
+
+#~ msgid "flex justify-between"
+#~ msgstr ""
+
+#: src/App.tsx
+msgid "Gross income"
+msgstr ""
+
+#~ msgid "flex justify-between text-destructive/80"
+#~ msgstr ""
+
+#: src/App.tsx
+msgid "− 7% expense deduction"
+msgstr ""
+
+#: src/App.tsx
+msgid "−€"
+msgstr ""
+
+#~ msgid "border-t border-border/30 pt-2 flex justify-between font-bold"
+#~ msgstr ""
+
+#: src/App.tsx
+msgid "= Net yields"
+msgstr ""
+
+#~ msgid "/yr (€"
+#~ msgstr ""
+
+#~ msgid "/mo)"
+#~ msgstr ""
+
+#: src/App.tsx
+msgid "Step 2: Social Security Quota"
+msgstr ""
+
+#~ msgid "ml-2 text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-full"
+#~ msgstr ""
+
+#: src/App.tsx
+#: src/App.tsx
+msgid ""
+"\n"
+"Tramo"
+msgstr ""
+
+#: src/App.tsx
+msgid "Your income bracket"
+msgstr ""
+
+#~ msgid "of 15"
+#~ msgstr ""
+
+#: src/App.tsx
+msgid "Contribution base range"
+msgstr ""
+
+#: src/App.tsx
+msgid "– €"
+msgstr ""
+
+#~ msgid "/mo"
+#~ msgstr ""
+
+#: src/App.tsx
+msgid "Your base (minimum)"
+msgstr ""
+
+#: src/App.tsx
+msgid "Rate applied"
+msgstr ""
+
+#: src/App.tsx
+msgid "31.4%"
+msgstr ""
+
+#: src/App.tsx
+msgid "= Monthly quota"
+msgstr ""
+
+#~ msgid "flex justify-between font-bold"
+#~ msgstr ""
+
+#: src/App.tsx
+msgid "= Annual SS"
+msgstr ""
+
+#~ msgid "/yr"
+#~ msgstr ""
+
+#~ msgid "text-xs text-muted-foreground/70"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "\n"
+#~ "💡 Most autónomos pay the minimum base for their tramo. You can choose a higher base (up to €"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "/mo) for better pension benefits.\n"
+#~ ""
+#~ msgstr ""
+
+#: src/App.tsx
+msgid "Step 3: Income Tax (IRPF)"
+msgstr ""
+
+#~ msgid ""
+#~ "— Progressive brackets\n"
+#~ ""
+#~ msgstr ""
+
+#~ msgid "flex justify-between text-muted-foreground/60 text-[10px] uppercase tracking-wider pb-1"
+#~ msgstr ""
+
+#: src/App.tsx
+msgid "Bracket"
+msgstr ""
+
+#: src/App.tsx
+#: src/App.tsx
+msgid "Rate"
+msgstr ""
+
+#: src/App.tsx
+#: src/App.tsx
+msgid "Taxable"
+msgstr ""
+
+#: src/App.tsx
+#: src/App.tsx
+msgid "Tax"
+msgstr ""
+
+#~ msgid "flex justify-between items-center"
+#~ msgstr ""
+
+#~ msgid "text-muted-foreground w-24"
+#~ msgstr ""
+
+#: src/App.tsx
+#: src/App.tsx
+msgid "–€"
+msgstr ""
+
+#~ msgid "text-primary font-bold w-12 text-center"
+#~ msgstr ""
+
+#~ msgid "text-foreground w-20 text-right"
+#~ msgstr ""
+
+#~ msgid "text-foreground w-20 text-right font-bold"
+#~ msgstr ""
+
+#: src/App.tsx
+#: src/App.tsx
+msgid "= Total IRPF"
+msgstr ""
+
+#~ msgid ""
+#~ "\n"
+#~ "Taxable base: €"
+#~ msgstr ""
+
+#~ msgid "(net yields) − €"
+#~ msgstr ""
+
+#: src/App.tsx
+msgid "(SS) = €"
+msgstr ""
+
+#~ msgid "space-y-3 text-muted-foreground"
+#~ msgstr ""
+
+#: src/App.tsx
+msgid "Your contribution is lower than what's really paid."
+msgstr ""
+
+#: src/App.tsx
+msgid ""
+"You pay 6.35% in Social Security, but your employer contributes an additional ~30% on top of your gross salary that doesn't appear on your payslip.\n"
+""
+msgstr ""
+
+#: src/App.tsx
+msgid ""
+"\n"
+"Your 6.35% breaks down as:"
+msgstr ""
+
+#: src/App.tsx
+msgid "4.7%"
+msgstr ""
+
+#: src/App.tsx
+msgid "for common contingencies,"
+msgstr ""
+
+#: src/App.tsx
+msgid "1.55%"
+msgstr ""
+
+#: src/App.tsx
+msgid "for unemployment, and"
+msgstr ""
+
+#: src/App.tsx
+msgid "0.1%"
+msgstr ""
+
+#: src/App.tsx
+msgid ""
+"for professional training.\n"
+""
+msgstr ""
+
+#~ msgid "bg-card/50 rounded-xl p-4 space-y-2 font-mono text-xs mt-4"
+#~ msgstr ""
+
+#: src/App.tsx
+msgid "IRPF Bracket"
+msgstr ""
+
+#~ msgid "lg:col-span-8 space-y-8"
+#~ msgstr ""
+
+#~ msgid "bg-card border border-border/50 rounded-[2.5rem] p-8 md:p-12 shadow-sm relative overflow-hidden flex flex-col min-h-[600px]"
+#~ msgstr ""
+
+#~ msgid "absolute top-0 right-0 p-8 opacity-5"
+#~ msgstr ""
+
+#~ msgid "relative z-10 space-y-8 flex-1 flex flex-col"
+#~ msgstr ""
+
+#~ msgid "flex flex-col md:flex-row md:items-end justify-between gap-6"
+#~ msgstr ""
+
+#~ msgid "flex items-center gap-2 text-primary font-bold hover:gap-3 transition-all text-sm group"
+#~ msgstr ""
+
+#~ msgid "group-hover:-translate-x-1 transition-transform"
+#~ msgstr ""
+
+#: src/App.tsx
+msgid ""
+"\n"
+"Back to Overview\n"
+""
+msgstr ""
+
+#~ msgid "space-y-1"
+#~ msgstr ""
+
+#~ msgid "text-3xl font-bold"
+#~ msgstr ""
+
+#: src/App.tsx
+msgid "Your Tax at work"
+msgstr ""
+
+#~ msgid "text-muted-foreground max-w-lg"
+#~ msgstr ""
+
+#: src/App.tsx
+msgid "Specific breakdown of how your contributions are spent within {0}."
+msgstr "Desglose específico de cómo se gastan tus contribuciones dentro de {0}."
+
+#: src/App.tsx
+msgid "Based on 2024 state budgets, here is how your €{0} is distributed."
+msgstr "Basado en los presupuestos estatales de 2024, así se distribuyen tus €{0}."
+
+#~ msgid "flex bg-muted p-1 rounded-xl w-fit h-fit shrink-0"
+#~ msgstr ""
+
+#~ msgid "p-2 rounded-lg transition-all"
+#~ msgstr ""
+
+#: src/App.tsx
+msgid "Bar Chart"
+msgstr ""
+
+#: src/App.tsx
+msgid "pie"
+msgstr ""
+
+#: src/App.tsx
+msgid "Pie Chart"
+msgstr ""
+
+#~ msgid "w-full"
+#~ msgstr ""
+
+#: src/App.tsx
+msgid "100%"
+msgstr ""
+
+#: src/App.tsx
+msgid "vertical"
+msgstr ""
+
+#~ msgid "category"
+#~ msgstr ""
+
+#: src/App.tsx
+msgid "name"
+msgstr ""
+
+#. placeholder {0}: x
+#. placeholder {1}: y
+#: src/App.tsx
+msgid "translate({0},{1})"
+msgstr ""
+
+#: src/App.tsx
+msgid "end"
+msgstr ""
+
+#: src/App.tsx
+msgid "var(--foreground)"
+msgstr ""
+
+#~ msgid "text-[11px] font-bold"
+#~ msgstr ""
+
+#: src/App.tsx
+msgid "..."
+msgstr ""
+
+#: src/App.tsx
+msgid "var(--primary)"
+msgstr ""
+
+#~ msgid "bg-popover border border-border p-4 rounded-2xl shadow-2xl animate-in fade-in zoom-in duration-200"
+#~ msgstr ""
+
+#~ msgid "font-bold text-sm mb-1"
+#~ msgstr ""
+
+#~ msgid "text-primary text-xl font-black mb-1"
+#~ msgstr ""
+
+#~ msgid "text-xs text-muted-foreground"
+#~ msgstr ""
+
+#~ msgid "% of your total tax"
+#~ msgstr ""
+
+#~ msgid "text-[10px] text-primary font-bold mt-2 uppercase tracking-tight"
+#~ msgstr ""
+
+#: src/App.tsx
+msgid "Click to drill down"
+msgstr ""
+
+#: src/App.tsx
+#: src/App.tsx
+msgid "value"
+msgstr ""
+
+#~ msgid "pointer"
+#~ msgstr ""
+
+#~ msgid "default"
+#~ msgstr ""
+
+#~ msgid "cell-{0}"
+#~ msgstr ""
+
+#: src/App.tsx
+#: src/App.tsx
+msgid "50%"
+msgstr ""
+
+#: src/App.tsx
+msgid "none"
+msgstr ""
+
+#~ msgid "% of total"
+#~ msgstr ""
+
+#~ msgid "grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-auto"
+#~ msgstr ""
+
+#~ msgid "flex items-center gap-4 p-4 rounded-2xl bg-muted/30 hover:bg-muted/50 transition-all text-left group"
+#~ msgstr ""
+
+#~ msgid "w-1 h-8 rounded-full"
+#~ msgstr ""
+
+#~ msgid "overflow-hidden"
+#~ msgstr ""
+
+#~ msgid "text-[10px] font-bold text-muted-foreground uppercase truncate"
+#~ msgstr ""
+
+#~ msgid "text-lg font-black truncate"
+#~ msgstr ""
+
+#~ msgid "flex items-center justify-between"
+#~ msgstr ""
+
+#: src/App.tsx
+msgid "Full Spending Table"
+msgstr ""
+
+#: src/App.tsx
+msgid "Every euro accounted for, down to the subcategory level."
+msgstr ""
+
+#~ msgid "bg-card border border-border/50 rounded-3xl overflow-hidden shadow-sm"
+#~ msgstr ""
+
+#~ msgid "w-full text-left border-collapse"
+#~ msgstr ""
+
+#~ msgid "bg-muted/50 text-muted-foreground text-xs font-bold uppercase tracking-wider"
+#~ msgstr ""
+
+#~ msgid "px-8 py-4"
+#~ msgstr ""
+
+#: src/App.tsx
+msgid "Category / Subcategory"
+msgstr "Categoría / Subcategoría"
+
+#~ msgid "px-8 py-4 text-right"
+#~ msgstr ""
+
+#: src/App.tsx
+msgid "% of Total"
+msgstr "% del Total"
+
+#: src/App.tsx
+msgid "Contribution"
+msgstr "Contribución"
+
+#~ msgid "divide-y divide-border/30"
+#~ msgstr ""
+
+#~ msgid "bg-primary/5 border border-primary/20 rounded-[2.5rem] p-8 md:p-12 text-center space-y-8"
+#~ msgstr ""
+
+#~ msgid "max-w-2xl mx-auto space-y-4"
+#~ msgstr ""
+
+#~ msgid "Lower next month’s rent. Without moving."
+#~ msgstr "Baja el alquiler del próximo mes. Sin mudarte."
+
+#~ msgid ""
+#~ "\n"
+#~ "Generation Rent helps renters turn everyday spending, bill switching, and smart timing into automatic rent reductions.\n"
+#~ "Be the first to know when we launch the full experience.\n"
+#~ ""
+#~ msgstr ""
+#~ "\n"
+#~ "Generation Rent ayuda a los inquilinos a convertir el gasto diario, el cambio de facturas y el tiempo inteligente en reducciones automáticas del alquiler.\n"
+#~ "Sé el primero en saber cuándo lanzamos la experiencia completa.\n"
+#~ ""
+
+#~ msgid "max-w-md mx-auto flex flex-col sm:flex-row gap-3"
+#~ msgstr ""
+
+#: src/App.tsx
+msgid "Thanks for your interest!"
+msgstr "¡Gracias por tu interés!"
+
+#~ msgid "email"
+#~ msgstr ""
+
+#: src/App.tsx
+msgid "Enter your email"
+msgstr "Ingresa tu correo"
+
+#~ msgid "flex-1 bg-card border-2 border-border/50 rounded-2xl px-6 py-4 focus:border-primary outline-none transition-all"
+#~ msgstr ""
+
+#~ msgid "submit"
+#~ msgstr ""
+
+#~ msgid "px-8 py-4 bg-primary text-primary-foreground font-bold rounded-2xl hover:opacity-90 transition-all shadow-lg"
+#~ msgstr ""
+
+#: src/App.tsx
+msgid ""
+"\n"
+"Interested\n"
+""
+msgstr ""
+"\n"
+"Interesado\n"
+""
+
+#~ msgid "max-w-6xl mx-auto px-6 py-12 border-t border-border/40 mt-auto"
+#~ msgstr ""
+
+#~ msgid "flex flex-col items-center justify-center gap-4 py-8"
+#~ msgstr ""
+
+#~ msgid "text-sm font-medium text-muted-foreground"
+#~ msgstr ""
+
+#: src/App.tsx
+msgid "Created by"
+msgstr ""
+
+#~ msgid "h-12 w-auto opacity-80 hover:opacity-100 transition-opacity"
+#~ msgstr ""
+
+#~ msgid "flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-muted-foreground pt-4 border-t border-border/20"
+#~ msgstr ""
+
+#~ msgid "text-xs"
+#~ msgstr ""
+
+#: src/App.tsx
+msgid "Data sourced from Spain General State Budgets 2024"
+msgstr ""
+
+#~ msgid "flex flex-wrap gap-x-6 gap-y-2 text-xs"
+#~ msgstr ""
+
+#: src/App.tsx
+msgid "https://www.igae.pap.hacienda.gob.es/sitios/igae/es-ES/Contabilidad/ContabilidadNacional/Publicaciones/paginas/iacogof.aspx"
+msgstr ""
+
+#: src/App.tsx
+#: src/App.tsx
+#: src/App.tsx
+msgid "_blank"
+msgstr ""
+
+#: src/App.tsx
+#: src/App.tsx
+#: src/App.tsx
+msgid "noopener noreferrer"
+msgstr ""
+
+#~ msgid "hover:text-primary transition-colors underline-offset-2 hover:underline"
+#~ msgstr ""
+
+#: src/App.tsx
+msgid "IGAE COFOG Data"
+msgstr ""
+
+#: src/App.tsx
+msgid "https://transparencia.gob.es/en/publicidad-activa/por-materias/informacion-economico-presupuestaria/presupuestos-generales-estado/pge-gastos"
+msgstr ""
+
+#: src/App.tsx
+msgid "Presupuestos Generales"
+msgstr ""
+
+#: src/App.tsx
+msgid "https://sede.agenciatributaria.gob.es/Sede/en_gb/educacion-civico-tributaria/programa-educacion-civico-tributaria/que-son-impuestos/contenidos/gastos-publicos/distribucion-funcional-gasto-publico.html"
+msgstr ""
+
+#: src/App.tsx
+msgid "Tax Agency"
+msgstr ""
+
+#~ msgid "group cursor-pointer hover:bg-muted/20 transition-colors"
+#~ msgstr ""
+
+#~ msgid "bg-muted/10"
+#~ msgstr ""
+
+#~ msgid "px-8 py-5"
+#~ msgstr ""
+
+#~ msgid "w-2 h-2 rounded-full ring-4 ring-background shrink-0"
+#~ msgstr ""
+
+#~ msgid "min-w-0"
+#~ msgstr ""
+
+#~ msgid "text-foreground font-semibold"
+#~ msgstr ""
+
+#~ msgid "text-muted-foreground group-hover:text-primary transition-colors"
+#~ msgstr ""
+
+#~ msgid "text-xs text-muted-foreground mt-1 max-w-md"
+#~ msgstr ""
+
+#~ msgid "px-8 py-5 text-right font-medium text-muted-foreground align-top"
+#~ msgstr ""
+
+#~ msgid "px-8 py-5 text-right font-bold align-top"
+#~ msgstr ""
+
+#~ msgid "bg-muted/5 text-[13px]"
+#~ msgstr ""
+
+#~ msgid "px-16 py-4 border-l-2 border-primary/20 ml-8"
+#~ msgstr ""
+
+#~ msgid "text-foreground/80"
+#~ msgstr ""
+
+#~ msgid "text-[11px] text-muted-foreground/70 mt-0.5 max-w-sm"
+#~ msgstr ""
+
+#~ msgid "px-8 py-4 text-right text-muted-foreground/60 align-top"
+#~ msgstr ""
+
+#~ msgid "px-8 py-4 text-right font-medium opacity-80 align-top"
+#~ msgstr ""
+
+#~ msgid "Switching to"
+#~ msgstr ""
+
+#~ msgid "Loaded"
+#~ msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "General public services"
+msgstr "Servicios públicos generales"
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Executive & legislative organs"
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Foreign economic aid"
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "General services"
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Basic research"
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "R&D General public services"
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "General public services n.e.c."
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Public debt interest"
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Defense"
+msgstr "Defensa"
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Military defense"
+msgstr "Defensa militar"
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Foreign military aid"
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "R&D Defense"
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Public order & safety"
+msgstr "Orden público y seguridad"
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Police services"
+msgstr "Servicios policiales"
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Fire-protection services"
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Law courts"
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Prisons"
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Public order & safety n.e.c."
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Economic affairs"
+msgstr "Asuntos económicos"
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "General economic & labor affairs"
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Agriculture forestry fishing"
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Fuel & energy"
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Industry construction"
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Transport"
+msgstr "Transporte"
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Communications"
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Other economic affairs"
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "R&D Economic affairs"
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Environmental protection"
+msgstr "Protección del medio ambiente"
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Waste management"
+msgstr "Gestión de residuos"
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Waste water management"
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Pollution abatement"
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Biodiversity & landscape"
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Environmental protection n.e.c."
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Housing & community amenities"
+msgstr "Vivienda y servicios comunitarios"
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Housing development"
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Community development"
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Water supply"
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Street lighting"
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Housing & community n.e.c."
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Health"
+msgstr "Salud"
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Medical products & equipment"
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Outpatient services"
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Hospital services"
+msgstr "Servicios hospitalarios"
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Public health services"
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "R&D Health"
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Health n.e.c."
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Recreation culture & religion"
+msgstr "Recreación, cultura y religión"
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Sport & recreation services"
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Cultural services"
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Broadcasting & publishing"
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Religious & community services"
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Recreation culture n.e.c."
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Education"
+msgstr "Educación"
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Pre-primary & primary education"
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Secondary education"
+msgstr "Educación secundaria"
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Tertiary education"
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Education not definable by level"
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Subsidiary services to education"
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "R&D Education"
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Education n.e.c."
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Social protection"
+msgstr "Protección social"
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Sickness & disability"
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Old age (pensions)"
+msgstr "Vejez (pensiones)"
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Survivors"
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Family & children"
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Unemployment"
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Housing"
+msgstr "Vivienda"
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Social exclusion"
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Social protection n.e.c."
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Funding for government operations, diplomacy, and servicing the national debt."
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Parliament, ministries, embassies, and tax collection."
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "International development assistance and humanitarian programs."
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Shared administrative services across government."
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Fundamental scientific research not tied to specific applications."
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Research to improve government efficiency."
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Other general government services not classified elsewhere."
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Interest payments on Spain's national debt."
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "National security through military forces and international defense cooperation."
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Armed forces operations, equipment, and personnel."
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Military assistance to allied nations and NATO contributions."
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Development of new defense technologies and systems."
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Maintaining law, order, and public safety across Spain."
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "National Police, Guardia Civil, and local police forces."
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Fire brigades and emergency rescue services."
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Courts, judges, and the judicial administration system."
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Correctional facilities and rehabilitation programs."
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Other public safety services not classified elsewhere."
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Supporting economic growth through infrastructure, industry, and job programs."
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Economic regulation, labor market policies, and employment services."
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Support for farmers, rural development, and fishing communities."
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Energy infrastructure and renewable energy transition."
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Industrial policy and construction sector support."
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Roads, railways, airports, and public transit systems."
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Telecommunications infrastructure and digital connectivity."
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Tourism promotion and other economic development programs."
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Research to boost economic competitiveness and innovation."
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Protecting Spain's natural environment and fighting climate change."
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Collection, recycling, and disposal of municipal waste."
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Sewage treatment and water quality protection."
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Reducing air, water, and soil pollution."
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Protection of natural habitats and wildlife conservation."
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Other environmental programs including climate action."
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Building communities through housing, water supply, and urban development."
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Social housing construction and housing assistance programs."
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Urban planning and neighborhood improvement projects."
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Clean drinking water infrastructure and distribution."
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Public lighting for roads, parks, and public spaces."
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Other housing and community services."
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Universal healthcare through Spain's public health system."
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Medicines, vaccines, and medical devices."
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Primary care, specialist consultations, and clinics."
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Public hospitals, surgeries, and inpatient care."
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Disease prevention, vaccination campaigns, and health education."
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Medical research and drug development."
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Other health services including mental health programs."
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Enriching lives through sports, arts, culture, and heritage preservation."
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Public sports facilities and recreational programs."
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Museums, libraries, theaters, and cultural events."
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Public broadcasting (RTVE) and media services."
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Heritage site maintenance and community gatherings."
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Other cultural and recreational services."
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Investing in Spain's future through public education at all levels."
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Nursery schools and primary education (ages 3-12)."
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "ESO and Bachillerato (ages 12-18)."
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Public universities and higher education."
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Adult education and lifelong learning."
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "School meals, transport, and student support."
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Educational research and curriculum development."
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Other educational services and programs."
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "The social safety net: pensions, unemployment benefits, and family support."
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Disability pensions and sick leave benefits."
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "State retirement pensions for seniors."
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Widow/widower and orphan pensions."
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Child benefits, parental leave, and family support."
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Unemployment benefits and job-seeking support."
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Housing allowances for low-income families."
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Programs combating poverty and social marginalization."
+msgstr ""
+
+#: src/lib/translate-keys.ts
+#: src/lib/translations-es.ts
+msgid "Other social welfare services."
+msgstr ""
+
+#: src/App.tsx
+#: src/App.tsx
+msgid "{0}"
+msgstr ""
+
+#: src/App.tsx
+msgid "of your total tax"
+msgstr "de tu impuesto total"
+
+#: src/App.tsx
+msgid "of total"
+msgstr "del total"
+
+#~ msgid "TRANSFORM TEST:"
+#~ msgstr ""
+
+#~ msgid "string"
+#~ msgstr ""
+
+#~ msgid "[i18n-404:"
+#~ msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Servicios públicos generales"
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Defensa"
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Orden público y seguridad"
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Asuntos económicos"
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Protección del medio ambiente"
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Vivienda y servicios comunitarios"
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Salud"
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Recreación, cultura y religión"
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Educación"
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Protección social"
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Órganos ejecutivos y legislativos"
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Ayuda económica exterior"
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Servicios generales"
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Investigación básica"
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "I+D Servicios públicos generales"
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Servicios públicos generales n.c.o.p."
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Intereses de la deuda pública"
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Defensa militar"
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Ayuda militar exterior"
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "I+D Defensa"
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Servicios policiales"
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Servicios de protección contra incendios"
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Tribunales de justicia"
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Prisiones"
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Orden público y seguridad n.c.o.p."
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Asuntos económicos y laborales generales"
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Agricultura, silvicultura y pesca"
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Combustible y energía"
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Industria y construcción"
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Transporte"
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Comunicaciones"
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Otros asuntos económicos"
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "I+D Asuntos económicos"
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Gestión de residuos"
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Gestión de aguas residuales"
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Reducción de la contaminación"
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Biodiversidad y paisaje"
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Protección del medio ambiente n.c.o.p."
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Desarrollo de vivienda"
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Desarrollo comunitario"
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Abastecimiento de agua"
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Alumbrado público"
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Vivienda y comunidad n.c.o.p."
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Productos y equipos médicos"
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Servicios ambulatorios"
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Servicios hospitalarios"
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Servicios de salud pública"
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "I+D Salud"
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Salud n.c.o.p."
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Servicios deportivos y recreativos"
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Servicios culturales"
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Radiodifusión y publicación"
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Servicios religiosos y comunitarios"
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Recreación y cultura n.c.o.p."
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Educación preescolar y primaria"
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Educación secundaria"
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Educación terciaria"
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Educación no definible por nivel"
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Servicios auxiliares de educación"
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "I+D Educación"
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Educación n.c.o.p."
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Enfermedad y discapacidad"
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Vejez (pensiones)"
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Supervivientes"
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Familia e infancia"
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Desempleo"
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Vivienda"
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Exclusión social"
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Protección social n.c.o.p."
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Financiación de operaciones gubernamentales, diplomacia y servicio de la deuda nacional."
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Seguridad nacional mediante fuerzas militares y cooperación internacional en defensa."
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Mantenimiento de la ley, el orden y la seguridad pública en toda España."
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Apoyo al crecimiento económico mediante infraestructura, industria y programas de empleo."
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Protección del medio ambiente natural de España y lucha contra el cambio climático."
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Construcción de comunidades mediante vivienda, abastecimiento de agua y desarrollo urbano."
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Atención sanitaria universal a través del sistema público de salud de España."
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Enriquecimiento de la vida mediante deportes, arte, cultura y preservación del patrimonio."
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Inversión en el futuro de España mediante educación pública en todos los niveles."
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "La red de seguridad social: pensiones, prestaciones por desempleo y apoyo familiar."
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Parlamento, ministerios, embajadas y recaudación de impuestos."
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Asistencia al desarrollo internacional y programas humanitarios."
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Servicios administrativos compartidos en todo el gobierno."
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Investigación científica fundamental no vinculada a aplicaciones específicas."
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Investigación para mejorar la eficiencia gubernamental."
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Otros servicios gubernamentales generales no clasificados en otra parte."
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Pagos de intereses de la deuda nacional de España."
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Operaciones, equipamiento y personal de las fuerzas armadas."
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Asistencia militar a naciones aliadas y contribuciones a la OTAN."
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Desarrollo de nuevas tecnologías y sistemas de defensa."
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Policía Nacional, Guardia Civil y fuerzas policiales locales."
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Brigadas de bomberos y servicios de rescate de emergencia."
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Tribunales, jueces y el sistema de administración judicial."
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Centros penitenciarios y programas de rehabilitación."
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Otros servicios de seguridad pública no clasificados en otra parte."
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Regulación económica, políticas del mercado laboral y servicios de empleo."
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Apoyo a agricultores, desarrollo rural y comunidades pesqueras."
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Infraestructura energética y transición a energías renovables."
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Política industrial y apoyo al sector de la construcción."
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Carreteras, ferrocarriles, aeropuertos y sistemas de transporte público."
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Infraestructura de telecomunicaciones y conectividad digital."
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Promoción turística y otros programas de desarrollo económico."
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Investigación para impulsar la competitividad económica y la innovación."
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Recogida, reciclaje y eliminación de residuos municipales."
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Tratamiento de aguas residuales y protección de la calidad del agua."
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Reducción de la contaminación del aire, agua y suelo."
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Protección de hábitats naturales y conservación de la vida silvestre."
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Otros programas medioambientales incluyendo acción climática."
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Construcción de vivienda social y programas de asistencia a la vivienda."
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Planificación urbana y proyectos de mejora de barrios."
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Infraestructura de agua potable y distribución."
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Iluminación pública para carreteras, parques y espacios públicos."
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Otros servicios de vivienda y comunidad."
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Medicamentos, vacunas y dispositivos médicos."
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Atención primaria, consultas especializadas y clínicas."
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Hospitales públicos, cirugías y atención hospitalaria."
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Prevención de enfermedades, campañas de vacunación y educación sanitaria."
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Investigación médica y desarrollo de medicamentos."
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Otros servicios de salud incluyendo programas de salud mental."
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Instalaciones deportivas públicas y programas recreativos."
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Museos, bibliotecas, teatros y eventos culturales."
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Radiodifusión pública (RTVE) y servicios de medios."
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Mantenimiento de sitios patrimoniales y reuniones comunitarias."
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Otros servicios culturales y recreativos."
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Escuelas infantiles y educación primaria (3-12 años)."
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "ESO y Bachillerato (12-18 años)."
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Universidades públicas y educación superior."
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Educación de adultos y aprendizaje permanente."
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Comidas escolares, transporte y apoyo al estudiante."
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Investigación educativa y desarrollo curricular."
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Otros servicios y programas educativos."
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Pensiones por discapacidad y prestaciones por enfermedad."
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Pensiones de jubilación estatales para mayores."
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Pensiones de viudedad y orfandad."
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Prestaciones por hijo, permiso parental y apoyo familiar."
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Prestaciones por desempleo y apoyo a la búsqueda de empleo."
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Subsidios de vivienda para familias de bajos ingresos."
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Programas contra la pobreza y la marginación social."
+msgstr ""
+
+#: src/lib/translations-es.ts
+msgid "Otros servicios de bienestar social."
+msgstr ""
+
+#: src/App.tsx
+msgid ""
+"\n"
+"💡"
+msgstr ""
+
+#. placeholder {0}: breakdown.details.ssTramo?.maxBase.toLocaleString()
+#: src/App.tsx
+msgid "La mayoría de los autónomos pagan la base mínima de su tramo. Puedes elegir una base más alta (hasta €{0}/mes) para mejores prestaciones de jubilación."
+msgstr ""
+
+#. placeholder {0}: breakdown.details.ssTramo?.maxBase.toLocaleString()
+#: src/App.tsx
+msgid "Most autónomos pay the minimum base for their tramo. You can choose a higher base (up to €{0}/mo) for better pension benefits."
+msgstr ""
+
+#: src/App.tsx
+msgid "Progressive brackets"
+msgstr ""
+
+#: src/App.tsx
+msgid "Taxable base:"
+msgstr ""
+
+#: src/App.tsx
+msgid "net yields"
+msgstr ""
+
+#: src/App.tsx
+msgid ") − €"
+msgstr ""
+
+#: src/App.tsx
+msgid "Lower next month's rent. Without moving."
+msgstr ""
+
+#: src/App.tsx
+#: src/App.tsx
+msgid "año"
+msgstr ""
+
+#: src/App.tsx
+#: src/App.tsx
+msgid "yr"
+msgstr ""
+
+#: src/App.tsx
+msgid "(€"
+msgstr ""
+
+#: src/App.tsx
+#: src/App.tsx
+#: src/App.tsx
+#: src/App.tsx
+msgid "mes"
+msgstr ""
+
+#: src/App.tsx
+#: src/App.tsx
+#: src/App.tsx
+#: src/App.tsx
+msgid "mo"
+msgstr ""
+
+#: src/App.tsx
+msgid "of"
+msgstr ""
+
+#: src/App.tsx
+msgid "15"
+msgstr ""
+
+#: src/App.tsx
+#: src/App.tsx
+msgid "EUDA"
+msgstr ""
+
+#: src/App.tsx
+msgid ""
+"\n"
+"EUDA helps renters turn everyday spending, bill switching, and smart timing into automatic rent reductions.\n"
+"Be the first to know when we launch the full experience.\n"
+""
+msgstr ""

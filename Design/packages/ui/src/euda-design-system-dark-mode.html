@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Euda — Design System</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  /* ── Core Tokens ── */
+  --primary:        #1152d4;
+  --primary-hover:  #0e44b0;
+  --primary-light:  #3b76f5;
+  --primary-faint:  rgba(17,82,212,0.12);
+  --primary-glow:   rgba(17,82,212,0.35);
+  --bg-light:       #f6f6f8;
+  --bg-dark:        #101622;
+  --bg-dark-2:      #161e2e;
+  --bg-dark-3:      #1e2a40;
+  --bg-dark-4:      #243050;
+
+  /* ── Semantic ── */
+  --success:   #22c55e;
+  --warning:   #f59e0b;
+  --danger:    #ef4444;
+  --info:      #3b82f6;
+
+  /* ── Text ── */
+  --text-white:   #ffffff;
+  --text-muted:   #8ba0c0;
+  --text-faint:   #4a6080;
+  --text-dark:    #0d1117;
+
+  /* ── Radius ── */
+  --r:    0.25rem;
+  --r-lg: 0.5rem;
+  --r-xl: 0.75rem;
+  --r-full: 9999px;
+
+  /* ── Spacing scale ── */
+  --s1: 4px; --s2: 8px; --s3: 12px; --s4: 16px;
+  --s5: 20px; --s6: 24px; --s8: 32px; --s10: 40px;
+  --s12: 48px; --s16: 64px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg-dark);
+  color: var(--text-white);
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* ── Layout ── */
+.layout { display: flex; min-height: 100vh; }
+
+/* ── Sidebar ── */
+.sidebar {
+  width: 220px;
+  flex-shrink: 0;
+  background: var(--bg-dark-2);
+  border-right: 1px solid var(--bg-dark-3);
+  padding: var(--s6);
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s2);
+}
+
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: var(--s3);
+  margin-bottom: var(--s6);
+  padding-bottom: var(--s6);
+  border-bottom: 1px solid var(--bg-dark-3);
+}
+
+.logo-icon {
+  width: 32px; height: 32px;
+  background: var(--primary);
+  border-radius: var(--r-lg);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+
+.logo-icon svg { width: 18px; height: 18px; }
+
+.logo-text {
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: #fff;
+}
+
+.logo-text span { color: var(--primary-light); }
+
+.nav-section {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  padding: var(--s3) var(--s2) var(--s1);
+  margin-top: var(--s2);
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: var(--s2);
+  padding: var(--s2) var(--s3);
+  border-radius: var(--r-lg);
+  cursor: pointer;
+  color: var(--text-muted);
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.15s;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+}
+
+.nav-item:hover { background: var(--bg-dark-3); color: #fff; }
+.nav-item.active { background: var(--primary-faint); color: var(--primary-light); }
+.nav-item svg { width: 15px; height: 15px; flex-shrink: 0; }
+
+/* ── Main ── */
+.main {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--s12);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s16);
+}
+
+/* ── Section ── */
+.section { display: flex; flex-direction: column; gap: var(--s8); }
+
+.section-header { display: flex; flex-direction: column; gap: var(--s2); }
+
+.section-eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--primary-light);
+}
+
+.section-title {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: #fff;
+}
+
+.section-desc {
+  font-size: 14px;
+  color: var(--text-muted);
+  max-width: 520px;
+  line-height: 1.65;
+}
+
+.divider {
+  height: 1px;
+  background: var(--bg-dark-3);
+  margin: var(--s4) 0;
+}
+
+/* ── Token Grid ── */
+.token-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: var(--s3);
+}
+
+.token-card {
+  background: var(--bg-dark-2);
+  border: 1px solid var(--bg-dark-3);
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.token-card:hover { border-color: var(--primary); }
+
+.token-swatch {
+  height: 64px;
+  width: 100%;
+}
+
+.token-info {
+  padding: var(--s3);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.token-name { font-size: 12px; font-weight: 600; color: #fff; }
+.token-hex { font-size: 11px; color: var(--text-faint); font-family: monospace; }
+
+/* ── Type Scale ── */
+.type-row {
+  display: flex;
+  align-items: baseline;
+  gap: var(--s6);
+  padding: var(--s4) 0;
+  border-bottom: 1px solid var(--bg-dark-3);
+}
+
+.type-meta {
+  width: 120px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.type-label { font-size: 11px; font-weight: 700; color: var(--text-faint); text-transform: uppercase; letter-spacing: 0.1em; }
+.type-spec { font-size: 10px; color: var(--text-faint); opacity: 0.6; font-family: monospace; }
+
+/* ── Spacing Visual ── */
+.spacing-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s3);
+}
+
+.spacing-row {
+  display: flex;
+  align-items: center;
+  gap: var(--s4);
+}
+
+.spacing-bar-wrap { flex: 1; }
+.spacing-bar {
+  background: var(--primary);
+  height: 20px;
+  border-radius: var(--r);
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+.spacing-bar:hover { opacity: 1; }
+
+.spacing-meta {
+  width: 80px;
+  font-size: 11px;
+  color: var(--text-faint);
+  font-family: monospace;
+  flex-shrink: 0;
+}
+
+/* ── Radius ── */
+.radius-grid {
+  display: flex;
+  gap: var(--s4);
+  flex-wrap: wrap;
+}
+
+.radius-card {
+  background: var(--bg-dark-2);
+  border: 1px solid var(--bg-dark-3);
+  width: 80px; height: 80px;
+  display: flex; align-items: center; justify-content: center;
+  flex-direction: column;
+  gap: var(--s1);
+  transition: border-color 0.2s;
+  cursor: default;
+}
+.radius-card:hover { border-color: var(--primary); }
+.radius-label { font-size: 10px; color: var(--text-faint); font-family: monospace; }
+
+/* ── Buttons ── */
+.component-row {
+  display: flex;
+  gap: var(--s3);
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* Button base */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s2);
+  padding: 0 var(--s5);
+  height: 40px;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: var(--r-lg);
+  border: none;
+  cursor: pointer;
+  transition: all 0.15s;
+  text-decoration: none;
+  white-space: nowrap;
+  letter-spacing: -0.01em;
+}
+
+.btn svg { width: 15px; height: 15px; }
+
+.btn-primary {
+  background: var(--primary);
+  color: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3), 0 0 0 0 var(--primary-glow);
+}
+.btn-primary:hover {
+  background: var(--primary-hover);
+  box-shadow: 0 4px 16px var(--primary-glow);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background: var(--bg-dark-3);
+  color: #fff;
+  border: 1px solid var(--bg-dark-4);
+}
+.btn-secondary:hover { background: var(--bg-dark-4); }
+
+.btn-ghost {
+  background: transparent;
+  color: var(--text-muted);
+  border: 1px solid var(--bg-dark-3);
+}
+.btn-ghost:hover { border-color: var(--primary-light); color: var(--primary-light); }
+
+.btn-danger { background: var(--danger); color: #fff; }
+.btn-danger:hover { background: #dc2626; box-shadow: 0 4px 16px rgba(239,68,68,0.35); transform: translateY(-1px); }
+
+.btn-success { background: var(--success); color: #fff; }
+.btn-success:hover { background: #16a34a; box-shadow: 0 4px 16px rgba(34,197,94,0.35); transform: translateY(-1px); }
+
+.btn-sm { height: 32px; padding: 0 var(--s4); font-size: 12px; }
+.btn-lg { height: 48px; padding: 0 var(--s8); font-size: 15px; }
+.btn-icon { width: 40px; padding: 0; justify-content: center; }
+.btn-icon.btn-sm { width: 32px; }
+
+.btn-pill { border-radius: var(--r-full); }
+
+/* ── Inputs ── */
+.input-group { display: flex; flex-direction: column; gap: var(--s2); max-width: 320px; }
+
+.input-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+}
+
+.input {
+  background: var(--bg-dark-2);
+  border: 1.5px solid var(--bg-dark-3);
+  border-radius: var(--r-lg);
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  padding: 0 var(--s4);
+  height: 42px;
+  width: 100%;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  outline: none;
+}
+.input::placeholder { color: var(--text-faint); }
+.input:focus {
+  border-color: var(--primary-light);
+  box-shadow: 0 0 0 3px var(--primary-faint);
+}
+.input.error { border-color: var(--danger); }
+.input.success { border-color: var(--success); }
+
+.input-hint { font-size: 11px; color: var(--text-faint); }
+.input-hint.error-hint { color: var(--danger); }
+
+.input-wrap { position: relative; }
+.input-icon-left { position: absolute; left: var(--s4); top: 50%; transform: translateY(-50%); color: var(--text-faint); width: 16px; height: 16px; pointer-events: none; }
+.input.has-icon-left { padding-left: calc(var(--s4) + 20px); }
+
+/* ── Badges ── */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px var(--s3);
+  border-radius: var(--r-full);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.badge-dot { width: 5px; height: 5px; border-radius: 50%; }
+
+.badge-blue { background: var(--primary-faint); color: var(--primary-light); }
+.badge-blue .badge-dot { background: var(--primary-light); }
+.badge-green { background: rgba(34,197,94,0.12); color: #4ade80; }
+.badge-green .badge-dot { background: #4ade80; }
+.badge-yellow { background: rgba(245,158,11,0.12); color: #fbbf24; }
+.badge-yellow .badge-dot { background: #fbbf24; }
+.badge-red { background: rgba(239,68,68,0.12); color: #f87171; }
+.badge-red .badge-dot { background: #f87171; }
+.badge-ghost { background: var(--bg-dark-3); color: var(--text-muted); }
+
+/* ── Cards ── */
+.card {
+  background: var(--bg-dark-2);
+  border: 1px solid var(--bg-dark-3);
+  border-radius: var(--r-xl);
+  padding: var(--s6);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  border-color: var(--bg-dark-4);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+
+.card-interactive:hover {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 1px var(--primary), 0 8px 32px rgba(17,82,212,0.15);
+  cursor: pointer;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--s4);
+}
+
+.card-title { font-size: 15px; font-weight: 700; color: #fff; }
+.card-subtitle { font-size: 12px; color: var(--text-faint); margin-top: 2px; }
+
+.stat-value { font-size: 28px; font-weight: 800; color: #fff; letter-spacing: -0.04em; }
+.stat-delta { font-size: 12px; font-weight: 600; color: var(--success); margin-top: 2px; }
+
+.progress-wrap {
+  background: var(--bg-dark-3);
+  border-radius: var(--r-full);
+  height: 5px;
+  margin-top: var(--s4);
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: var(--r-full);
+  background: var(--primary);
+  transition: width 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: var(--s4);
+}
+
+/* ── Claim Step ── */
+.step-row {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  position: relative;
+}
+
+.step-circle {
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.step-done .step-circle { background: var(--primary); color: #fff; }
+.step-active .step-circle { background: var(--primary); color: #fff; box-shadow: 0 0 0 4px var(--primary-faint); }
+.step-upcoming .step-circle { background: var(--bg-dark-3); color: var(--text-faint); border: 1.5px solid var(--bg-dark-4); }
+
+.step-line {
+  flex: 1;
+  height: 2px;
+  background: var(--bg-dark-3);
+  margin: 0 -1px;
+}
+
+.step-line.done { background: var(--primary); }
+
+.step-labels {
+  display: flex;
+  margin-top: var(--s3);
+}
+
+.step-label-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
+}
+
+.step-name { font-size: 11px; font-weight: 600; color: var(--text-faint); text-align: center; }
+.step-name.active { color: var(--primary-light); }
+.step-name.done { color: #fff; }
+
+/* ── Toast ── */
+.toast-demo { display: flex; flex-direction: column; gap: var(--s3); max-width: 360px; }
+
+.toast {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--s3);
+  padding: var(--s4);
+  border-radius: var(--r-xl);
+  border: 1px solid;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(16px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+.toast-success { background: rgba(34,197,94,0.08); border-color: rgba(34,197,94,0.2); }
+.toast-error   { background: rgba(239,68,68,0.08); border-color: rgba(239,68,68,0.2); }
+.toast-info    { background: var(--primary-faint); border-color: rgba(17,82,212,0.3); }
+
+.toast-icon { width: 18px; height: 18px; flex-shrink: 0; margin-top: 1px; }
+.toast-title { font-size: 13px; font-weight: 700; color: #fff; }
+.toast-body { font-size: 12px; color: var(--text-muted); margin-top: 2px; line-height: 1.5; }
+
+/* ── Avatar ── */
+.avatar {
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.avatar-sm { width: 28px; height: 28px; font-size: 11px; }
+.avatar-md { width: 36px; height: 36px; font-size: 13px; }
+.avatar-lg { width: 48px; height: 48px; font-size: 16px; }
+.avatar-blue { background: var(--primary-faint); color: var(--primary-light); border: 1.5px solid var(--primary); }
+.avatar-green { background: rgba(34,197,94,0.12); color: #4ade80; border: 1.5px solid rgba(34,197,94,0.3); }
+
+/* ── Toggle ── */
+.toggle-wrap {
+  display: flex;
+  align-items: center;
+  gap: var(--s3);
+  cursor: pointer;
+  user-select: none;
+}
+
+.toggle {
+  width: 44px; height: 24px;
+  background: var(--bg-dark-3);
+  border-radius: var(--r-full);
+  position: relative;
+  transition: background 0.2s;
+  flex-shrink: 0;
+  border: 1.5px solid var(--bg-dark-4);
+}
+
+.toggle.on { background: var(--primary); border-color: var(--primary); }
+
+.toggle-thumb {
+  width: 18px; height: 18px;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 1px; left: 1px;
+  transition: transform 0.2s cubic-bezier(0.34,1.56,0.64,1);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+.toggle.on .toggle-thumb { transform: translateX(20px); }
+.toggle-label { font-size: 13px; font-weight: 500; color: var(--text-muted); }
+
+/* ── Select ── */
+.select {
+  appearance: none;
+  background: var(--bg-dark-2);
+  border: 1.5px solid var(--bg-dark-3);
+  border-radius: var(--r-lg);
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  padding: 0 var(--s10) 0 var(--s4);
+  height: 42px;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.15s;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%234a6080' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+}
+.select:focus { border-color: var(--primary-light); box-shadow: 0 0 0 3px var(--primary-faint); }
+.select option { background: var(--bg-dark-2); }
+
+/* ── Table ── */
+.table-wrap {
+  border: 1px solid var(--bg-dark-3);
+  border-radius: var(--r-xl);
+  overflow: hidden;
+}
+
+table { width: 100%; border-collapse: collapse; }
+
+thead { background: var(--bg-dark-3); }
+
+th {
+  padding: var(--s3) var(--s5);
+  text-align: left;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-faint);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+td {
+  padding: var(--s4) var(--s5);
+  font-size: 13px;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--bg-dark-3);
+}
+
+tbody tr:last-child td { border-bottom: none; }
+tbody tr { transition: background 0.1s; }
+tbody tr:hover { background: var(--bg-dark-2); }
+
+td.strong { color: #fff; font-weight: 600; }
+
+/* ── Sidebar toggle ── */
+@media (max-width: 768px) {
+  .sidebar { display: none; }
+  .main { padding: var(--s6); }
+}
+</style>
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- Sidebar -->
+  <nav class="sidebar">
+    <div class="sidebar-logo">
+      <div class="logo-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+          <polyline points="9 22 9 12 15 12 15 22"/>
+        </svg>
+      </div>
+      <div class="logo-text">Eu<span>da</span></div>
+    </div>
+
+    <div class="nav-section">Foundation</div>
+    <button class="nav-item active" onclick="scrollTo('colors')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a10 10 0 010 20"/></svg>
+      Colors
+    </button>
+    <button class="nav-item" onclick="scrollTo('typography')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 7 4 4 20 4 20 7"/><line x1="9" y1="20" x2="15" y2="20"/><line x1="12" y1="4" x2="12" y2="20"/></svg>
+      Typography
+    </button>
+    <button class="nav-item" onclick="scrollTo('spacing')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="21" y1="10" x2="3" y2="10"/><line x1="21" y1="6" x2="3" y2="6"/><line x1="21" y1="14" x2="3" y2="14"/><line x1="21" y1="18" x2="3" y2="18"/></svg>
+      Spacing
+    </button>
+
+    <div class="nav-section">Components</div>
+    <button class="nav-item" onclick="scrollTo('buttons')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="8" rx="2"/></svg>
+      Buttons
+    </button>
+    <button class="nav-item" onclick="scrollTo('inputs')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 9h10M7 13h6"/></svg>
+      Inputs
+    </button>
+    <button class="nav-item" onclick="scrollTo('badges')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+      Badges
+    </button>
+    <button class="nav-item" onclick="scrollTo('cards')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+      Cards
+    </button>
+
+    <div class="nav-section">Patterns</div>
+    <button class="nav-item" onclick="scrollTo('claim')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+      Claim Flow
+    </button>
+    <button class="nav-item" onclick="scrollTo('table')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18"/></svg>
+      Table
+    </button>
+    <button class="nav-item" onclick="scrollTo('feedback')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg>
+      Feedback
+    </button>
+  </nav>
+
+  <!-- Main -->
+  <main class="main">
+
+    <!-- ── COLORS ── -->
+    <section class="section" id="colors">
+      <div class="section-header">
+        <div class="section-eyebrow">Foundation</div>
+        <div class="section-title">Color Tokens</div>
+        <div class="section-desc">Core palette derived from your config. Click any token to copy the hex value.</div>
+      </div>
+
+      <div style="font-size:12px; font-weight:700; color:var(--text-faint); text-transform:uppercase; letter-spacing:0.1em;">Brand</div>
+      <div class="token-grid">
+        <div class="token-card" onclick="copyText('#1152d4', this)">
+          <div class="token-swatch" style="background:#1152d4"></div>
+          <div class="token-info"><div class="token-name">Primary</div><div class="token-hex">#1152D4</div></div>
+        </div>
+        <div class="token-card" onclick="copyText('#3b76f5', this)">
+          <div class="token-swatch" style="background:#3b76f5"></div>
+          <div class="token-info"><div class="token-name">Primary Light</div><div class="token-hex">#3B76F5</div></div>
+        </div>
+        <div class="token-card" onclick="copyText('#0e44b0', this)">
+          <div class="token-swatch" style="background:#0e44b0"></div>
+          <div class="token-info"><div class="token-name">Primary Dark</div><div class="token-hex">#0E44B0</div></div>
+        </div>
+        <div class="token-card" onclick="copyText('rgba(17,82,212,0.12)', this)">
+          <div class="token-swatch" style="background:rgba(17,82,212,0.12); border-bottom:1px solid var(--bg-dark-3)"></div>
+          <div class="token-info"><div class="token-name">Primary Faint</div><div class="token-hex">12% opacity</div></div>
+        </div>
+      </div>
+
+      <div style="font-size:12px; font-weight:700; color:var(--text-faint); text-transform:uppercase; letter-spacing:0.1em;">Backgrounds</div>
+      <div class="token-grid">
+        <div class="token-card" onclick="copyText('#f6f6f8', this)">
+          <div class="token-swatch" style="background:#f6f6f8; border-bottom:1px solid var(--bg-dark-3)"></div>
+          <div class="token-info"><div class="token-name">BG Light</div><div class="token-hex">#F6F6F8</div></div>
+        </div>
+        <div class="token-card" onclick="copyText('#101622', this)">
+          <div class="token-swatch" style="background:#101622"></div>
+          <div class="token-info"><div class="token-name">BG Dark</div><div class="token-hex">#101622</div></div>
+        </div>
+        <div class="token-card" onclick="copyText('#161e2e', this)">
+          <div class="token-swatch" style="background:#161e2e"></div>
+          <div class="token-info"><div class="token-name">BG Dark 2</div><div class="token-hex">#161E2E</div></div>
+        </div>
+        <div class="token-card" onclick="copyText('#1e2a40', this)">
+          <div class="token-swatch" style="background:#1e2a40"></div>
+          <div class="token-info"><div class="token-name">BG Dark 3</div><div class="token-hex">#1E2A40</div></div>
+        </div>
+      </div>
+
+      <div style="font-size:12px; font-weight:700; color:var(--text-faint); text-transform:uppercase; letter-spacing:0.1em;">Semantic</div>
+      <div class="token-grid">
+        <div class="token-card" onclick="copyText('#22c55e', this)">
+          <div class="token-swatch" style="background:#22c55e"></div>
+          <div class="token-info"><div class="token-name">Success</div><div class="token-hex">#22C55E</div></div>
+        </div>
+        <div class="token-card" onclick="copyText('#f59e0b', this)">
+          <div class="token-swatch" style="background:#f59e0b"></div>
+          <div class="token-info"><div class="token-name">Warning</div><div class="token-hex">#F59E0B</div></div>
+        </div>
+        <div class="token-card" onclick="copyText('#ef4444', this)">
+          <div class="token-swatch" style="background:#ef4444"></div>
+          <div class="token-info"><div class="token-name">Danger</div><div class="token-hex">#EF4444</div></div>
+        </div>
+        <div class="token-card" onclick="copyText('#3b82f6', this)">
+          <div class="token-swatch" style="background:#3b82f6"></div>
+          <div class="token-info"><div class="token-name">Info</div><div class="token-hex">#3B82F6</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── TYPOGRAPHY ── -->
+    <section class="section" id="typography">
+      <div class="section-header">
+        <div class="section-eyebrow">Foundation</div>
+        <div class="section-title">Typography</div>
+        <div class="section-desc">Inter across all weights. Tight tracking on display sizes, normal on body.</div>
+      </div>
+
+      <div>
+        <div class="type-row">
+          <div class="type-meta"><div class="type-label">Display</div><div class="type-spec">48px / 800 / -0.04em</div></div>
+          <div style="font-size:48px; font-weight:800; letter-spacing:-0.04em; color:#fff; line-height:1;">Euda</div>
+        </div>
+        <div class="type-row">
+          <div class="type-meta"><div class="type-label">H1</div><div class="type-spec">36px / 800 / -0.03em</div></div>
+          <div style="font-size:36px; font-weight:800; letter-spacing:-0.03em; color:#fff;">Reduce your rent today</div>
+        </div>
+        <div class="type-row">
+          <div class="type-meta"><div class="type-label">H2</div><div class="type-spec">28px / 700 / -0.02em</div></div>
+          <div style="font-size:28px; font-weight:700; letter-spacing:-0.02em; color:#fff;">Active Claims</div>
+        </div>
+        <div class="type-row">
+          <div class="type-meta"><div class="type-label">H3</div><div class="type-spec">20px / 700 / -0.01em</div></div>
+          <div style="font-size:20px; font-weight:700; letter-spacing:-0.01em; color:#fff;">Friedrichshain Apt</div>
+        </div>
+        <div class="type-row">
+          <div class="type-meta"><div class="type-label">Body</div><div class="type-spec">14px / 400 / 0</div></div>
+          <div style="font-size:14px; font-weight:400; color:var(--text-muted);">Your legal team is negotiating with the landlord regarding Mietpreisbremse compliance.</div>
+        </div>
+        <div class="type-row">
+          <div class="type-meta"><div class="type-label">Small</div><div class="type-spec">12px / 500 / 0</div></div>
+          <div style="font-size:12px; font-weight:500; color:var(--text-faint);">Last updated 2 hours ago · Claim #EU-2049</div>
+        </div>
+        <div class="type-row">
+          <div class="type-meta"><div class="type-label">Label</div><div class="type-spec">11px / 700 / 0.15em</div></div>
+          <div style="font-size:11px; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:var(--primary-light);">In Progress</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SPACING ── -->
+    <section class="section" id="spacing">
+      <div class="section-header">
+        <div class="section-eyebrow">Foundation</div>
+        <div class="section-title">Spacing & Radius</div>
+      </div>
+
+      <div style="font-size:12px; font-weight:700; color:var(--text-faint); text-transform:uppercase; letter-spacing:0.1em; margin-bottom: 8px;">Spacing Scale</div>
+      <div class="spacing-grid">
+        <div class="spacing-row"><div class="spacing-meta">s1 — 4px</div><div class="spacing-bar-wrap"><div class="spacing-bar" style="width:4px; min-width:4px"></div></div></div>
+        <div class="spacing-row"><div class="spacing-meta">s2 — 8px</div><div class="spacing-bar-wrap"><div class="spacing-bar" style="width:8px"></div></div></div>
+        <div class="spacing-row"><div class="spacing-meta">s3 — 12px</div><div class="spacing-bar-wrap"><div class="spacing-bar" style="width:12px"></div></div></div>
+        <div class="spacing-row"><div class="spacing-meta">s4 — 16px</div><div class="spacing-bar-wrap"><div class="spacing-bar" style="width:16px"></div></div></div>
+        <div class="spacing-row"><div class="spacing-meta">s5 — 20px</div><div class="spacing-bar-wrap"><div class="spacing-bar" style="width:20px"></div></div></div>
+        <div class="spacing-row"><div class="spacing-meta">s6 — 24px</div><div class="spacing-bar-wrap"><div class="spacing-bar" style="width:24px"></div></div></div>
+        <div class="spacing-row"><div class="spacing-meta">s8 — 32px</div><div class="spacing-bar-wrap"><div class="spacing-bar" style="width:32px"></div></div></div>
+        <div class="spacing-row"><div class="spacing-meta">s10 — 40px</div><div class="spacing-bar-wrap"><div class="spacing-bar" style="width:40px"></div></div></div>
+        <div class="spacing-row"><div class="spacing-meta">s12 — 48px</div><div class="spacing-bar-wrap"><div class="spacing-bar" style="width:48px"></div></div></div>
+        <div class="spacing-row"><div class="spacing-meta">s16 — 64px</div><div class="spacing-bar-wrap"><div class="spacing-bar" style="width:64px"></div></div></div>
+      </div>
+
+      <div style="font-size:12px; font-weight:700; color:var(--text-faint); text-transform:uppercase; letter-spacing:0.1em; margin-top:8px;">Border Radius</div>
+      <div class="radius-grid">
+        <div class="radius-card" style="border-radius:var(--r); border:1px solid var(--bg-dark-3);">
+          <div class="radius-label">r — 4px</div>
+        </div>
+        <div class="radius-card" style="border-radius:var(--r-lg); border:1px solid var(--bg-dark-3);">
+          <div class="radius-label">r-lg — 8px</div>
+        </div>
+        <div class="radius-card" style="border-radius:var(--r-xl); border:1px solid var(--bg-dark-3);">
+          <div class="radius-label">r-xl — 12px</div>
+        </div>
+        <div class="radius-card" style="border-radius:var(--r-full); border:1px solid var(--bg-dark-3);">
+          <div class="radius-label">r-full</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── BUTTONS ── -->
+    <section class="section" id="buttons">
+      <div class="section-header">
+        <div class="section-eyebrow">Components</div>
+        <div class="section-title">Buttons</div>
+      </div>
+
+      <div style="font-size:12px; font-weight:700; color:var(--text-faint); text-transform:uppercase; letter-spacing:0.1em;">Variants</div>
+      <div class="component-row">
+        <button class="btn btn-primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          New Claim
+        </button>
+        <button class="btn btn-secondary">View Documents</button>
+        <button class="btn btn-ghost">Cancel</button>
+        <button class="btn btn-danger">Delete Claim</button>
+        <button class="btn btn-success">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          Confirm
+        </button>
+      </div>
+
+      <div style="font-size:12px; font-weight:700; color:var(--text-faint); text-transform:uppercase; letter-spacing:0.1em;">Sizes</div>
+      <div class="component-row" style="align-items:center;">
+        <button class="btn btn-primary btn-sm">Small</button>
+        <button class="btn btn-primary">Medium</button>
+        <button class="btn btn-primary btn-lg">Large</button>
+        <button class="btn btn-primary btn-pill">Pill Shape</button>
+        <button class="btn btn-primary btn-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <button class="btn btn-secondary btn-icon btn-sm">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- ── INPUTS ── -->
+    <section class="section" id="inputs">
+      <div class="section-header">
+        <div class="section-eyebrow">Components</div>
+        <div class="section-title">Inputs & Forms</div>
+      </div>
+
+      <div class="component-row" style="align-items:flex-start; gap: 24px; flex-wrap:wrap;">
+        <div class="input-group">
+          <div class="input-label">Property Address</div>
+          <div class="input-wrap">
+            <svg class="input-icon-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+            <input class="input has-icon-left" placeholder="e.g. Müllerstrasse 42, Berlin" />
+          </div>
+          <div class="input-hint">We'll use this to verify rent price compliance.</div>
+        </div>
+
+        <div class="input-group">
+          <div class="input-label">Monthly Rent</div>
+          <input class="input success" value="€1,240.00" />
+          <div class="input-hint" style="color:var(--success);">✓ Rent verified against local index</div>
+        </div>
+
+        <div class="input-group">
+          <div class="input-label">Lease Start Date</div>
+          <input class="input error" placeholder="DD/MM/YYYY" />
+          <div class="input-hint error-hint">⚠ Date must be after 2015 for Mietpreisbremse to apply</div>
+        </div>
+
+        <div class="input-group">
+          <div class="input-label">Claim Type</div>
+          <select class="select">
+            <option>Mietpreisbremse (Germany)</option>
+            <option>Rent Pressure Zone (Ireland)</option>
+            <option>Section 13 Notice (UK)</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── BADGES ── -->
+    <section class="section" id="badges">
+      <div class="section-header">
+        <div class="section-eyebrow">Components</div>
+        <div class="section-title">Badges & Status</div>
+      </div>
+      <div class="component-row">
+        <div class="badge badge-blue"><div class="badge-dot"></div>In Progress</div>
+        <div class="badge badge-green"><div class="badge-dot"></div>Resolved</div>
+        <div class="badge badge-yellow"><div class="badge-dot"></div>Awaiting Docs</div>
+        <div class="badge badge-red"><div class="badge-dot"></div>Overdue</div>
+        <div class="badge badge-ghost">Draft</div>
+      </div>
+      <div class="component-row" style="margin-top:4px;">
+        <div style="display:flex; align-items:center; gap:8px;">
+          <div class="avatar avatar-md avatar-blue">AT</div>
+          <div class="avatar avatar-md avatar-green">MR</div>
+          <div class="avatar avatar-sm avatar-blue">JK</div>
+          <div class="avatar avatar-lg avatar-green">SR</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CARDS ── -->
+    <section class="section" id="cards">
+      <div class="section-header">
+        <div class="section-eyebrow">Components</div>
+        <div class="section-title">Cards</div>
+      </div>
+      <div class="cards-grid">
+        <div class="card">
+          <div class="card-header">
+            <div><div class="card-title">Monthly Savings</div><div class="card-subtitle">vs last month</div></div>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--text-faint)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/></svg>
+          </div>
+          <div class="stat-value">€450.00</div>
+          <div class="stat-delta">↑ +12.5% this month</div>
+          <div class="progress-wrap"><div class="progress-fill" style="width:72%"></div></div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div><div class="card-title">Total Recovered</div><div class="card-subtitle">All claims</div></div>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--text-faint)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+          </div>
+          <div class="stat-value">€2,850</div>
+          <div class="stat-delta" style="color:var(--primary-light);">Across 3 properties</div>
+          <div class="progress-wrap"><div class="progress-fill" style="width:55%; background: var(--primary-light)"></div></div>
+        </div>
+
+        <div class="card card-interactive">
+          <div class="card-header">
+            <div>
+              <div style="display:flex; gap:8px; align-items:center; margin-bottom:4px;">
+                <div class="card-title">Müllerstrasse 42</div>
+                <div class="badge badge-blue"><div class="badge-dot"></div>Active</div>
+              </div>
+              <div class="card-subtitle">Berlin · Claim #EU-2049</div>
+            </div>
+          </div>
+          <div style="font-size:13px; color:var(--text-muted); margin-bottom: var(--s4);">Negotiation phase — landlord response pending.</div>
+          <div class="progress-wrap"><div class="progress-fill" style="width:65%"></div></div>
+          <div style="font-size:11px; color:var(--text-faint); margin-top:6px; font-weight:500;">65% complete</div>
+        </div>
+      </div>
+
+      <div style="font-size:12px; font-weight:700; color:var(--text-faint); text-transform:uppercase; letter-spacing:0.1em; margin-top:8px;">Toggle</div>
+      <div class="component-row">
+        <div class="toggle-wrap" onclick="this.querySelector('.toggle').classList.toggle('on')">
+          <div class="toggle on"><div class="toggle-thumb"></div></div>
+          <div class="toggle-label">Email notifications</div>
+        </div>
+        <div class="toggle-wrap" onclick="this.querySelector('.toggle').classList.toggle('on')">
+          <div class="toggle"><div class="toggle-thumb"></div></div>
+          <div class="toggle-label">SMS alerts</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CLAIM FLOW ── -->
+    <section class="section" id="claim">
+      <div class="section-header">
+        <div class="section-eyebrow">Patterns</div>
+        <div class="section-title">Claim Progress Flow</div>
+        <div class="section-desc">Step indicator used across the claims workflow. Supports done, active, and upcoming states.</div>
+      </div>
+
+      <div class="card" style="max-width:560px;">
+        <div style="font-size:12px; font-weight:700; color:var(--text-faint); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:var(--s5);">Claim — Friedrichshain Apt</div>
+        <div class="step-row">
+          <div class="step step-done">
+            <div class="step-circle">✓</div>
+            <div class="step-line done"></div>
+          </div>
+          <div class="step step-done">
+            <div class="step-circle">✓</div>
+            <div class="step-line done"></div>
+          </div>
+          <div class="step step-active">
+            <div class="step-circle">3</div>
+            <div class="step-line"></div>
+          </div>
+          <div class="step step-upcoming">
+            <div class="step-circle">4</div>
+          </div>
+        </div>
+        <div class="step-labels">
+          <div class="step-label-item"><div class="step-name done">Application</div></div>
+          <div class="step-label-item"><div class="step-name done">Verification</div></div>
+          <div class="step-label-item"><div class="step-name active">Negotiation</div></div>
+          <div class="step-label-item"><div class="step-name">Resolution</div></div>
+        </div>
+        <div style="margin-top:var(--s5); background:var(--bg-dark-3); border-radius:var(--r-lg); padding:var(--s4); font-size:13px; color:var(--text-muted); line-height:1.6;">
+          <strong style="color:#fff; font-weight:600;">Currently in Landlord Negotiation</strong><br>
+          Your legal team is communicating with the landlord regarding Mietpreisbremse compliance. Expected update in 3–5 business days.
+        </div>
+      </div>
+    </section>
+
+    <!-- ── TABLE ── -->
+    <section class="section" id="table">
+      <div class="section-header">
+        <div class="section-eyebrow">Patterns</div>
+        <div class="section-title">Data Table</div>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Property</th>
+              <th>Claim ID</th>
+              <th>Monthly Saving</th>
+              <th>Status</th>
+              <th>Progress</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="strong">Müllerstrasse 42, Berlin</td>
+              <td>#EU-2049</td>
+              <td class="strong" style="color:var(--success);">€450/mo</td>
+              <td><div class="badge badge-blue"><div class="badge-dot"></div>In Progress</div></td>
+              <td>
+                <div style="display:flex; align-items:center; gap:8px;">
+                  <div class="progress-wrap" style="flex:1; margin:0"><div class="progress-fill" style="width:65%"></div></div>
+                  <span style="font-size:11px; color:var(--text-faint);">65%</span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="strong">Hauptstrasse 12, Munich</td>
+              <td>#EU-1982</td>
+              <td>€240/mo</td>
+              <td><div class="badge badge-yellow"><div class="badge-dot"></div>Awaiting Docs</div></td>
+              <td>
+                <div style="display:flex; align-items:center; gap:8px;">
+                  <div class="progress-wrap" style="flex:1; margin:0"><div class="progress-fill" style="width:30%"></div></div>
+                  <span style="font-size:11px; color:var(--text-faint);">30%</span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="strong">Neukölln Studio, Berlin</td>
+              <td>#EU-1821</td>
+              <td class="strong" style="color:var(--success);">€180/mo</td>
+              <td><div class="badge badge-green"><div class="badge-dot"></div>Resolved</div></td>
+              <td>
+                <div style="display:flex; align-items:center; gap:8px;">
+                  <div class="progress-wrap" style="flex:1; margin:0"><div class="progress-fill" style="width:100%; background:var(--success)"></div></div>
+                  <span style="font-size:11px; color:var(--text-faint);">100%</span>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ── FEEDBACK ── -->
+    <section class="section" id="feedback">
+      <div class="section-header">
+        <div class="section-eyebrow">Patterns</div>
+        <div class="section-title">Toasts & Feedback</div>
+      </div>
+
+      <div class="toast-demo">
+        <div class="toast toast-success">
+          <svg class="toast-icon" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          <div>
+            <div class="toast-title">Payment Received</div>
+            <div class="toast-body">€240 refund from claim #EU-1821 has been deposited.</div>
+          </div>
+        </div>
+        <div class="toast toast-info">
+          <svg class="toast-icon" viewBox="0 0 24 24" fill="none" stroke="var(--primary-light)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <div>
+            <div class="toast-title">Document Verified</div>
+            <div class="toast-body">Your lease for Müllerstrasse 42 was successfully verified.</div>
+          </div>
+        </div>
+        <div class="toast toast-error">
+          <svg class="toast-icon" viewBox="0 0 24 24" fill="none" stroke="#f87171" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <div>
+            <div class="toast-title">Upload Failed</div>
+            <div class="toast-body">File size exceeds 10MB. Please compress and try again.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<!-- Clipboard toast -->
+<div id="copy-toast" style="
+  position:fixed; bottom:24px; right:24px;
+  background:var(--bg-dark-3); border:1px solid var(--primary);
+  border-radius:var(--r-xl); padding:10px 16px;
+  font-size:13px; font-weight:600; color:var(--primary-light);
+  opacity:0; transform:translateY(8px);
+  transition:all 0.2s; pointer-events:none; z-index:9999;
+">Copied!</div>
+
+<script>
+  function copyText(val, el) {
+    navigator.clipboard.writeText(val).catch(() => {});
+    const toast = document.getElementById('copy-toast');
+    toast.textContent = `Copied ${val}`;
+    toast.style.opacity = '1';
+    toast.style.transform = 'translateY(0)';
+    setTimeout(() => {
+      toast.style.opacity = '0';
+      toast.style.transform = 'translateY(8px)';
+    }, 1800);
+  }
+
+  function scrollTo(id) {
+    document.getElementById(id).scrollIntoView({ behavior: 'smooth', block: 'start' });
+    document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+    event.currentTarget.classList.add('active');
+  }
+</script>
+</body>
+</html>

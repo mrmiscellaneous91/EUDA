@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Euda — Logo Export Preview</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800&family=DM+Serif+Display:ital@1&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary: #1152d4;
+  --primary-light: #3b76f5;
+  --text: #0d1117;
+  --text-muted: #6b7280;
+  --border: #e2e5ec;
+  --bg: #f6f6f8;
+  --bg-dark: #101622;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); padding: 48px 40px; }
+
+.eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--primary); margin-bottom: 6px; }
+.title { font-size: 40px; font-weight: 800; letter-spacing: -0.04em; margin-bottom: 6px; }
+.sub { font-size: 14px; color: var(--text-muted); margin-bottom: 48px; }
+
+.section-label { font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 16px; margin-top: 40px; }
+.section-label:first-of-type { margin-top: 0; }
+
+.asset-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+
+.asset-card { border-radius: 16px; overflow: hidden; border: 1px solid var(--border); }
+
+.asset-stage {
+  height: 160px;
+  display: flex; align-items: center; justify-content: center;
+}
+.asset-stage.light { background: #fff; }
+.asset-stage.subtle { background: var(--bg); }
+.asset-stage.dark { background: var(--bg-dark); }
+
+.asset-meta {
+  padding: 14px 18px;
+  background: #fff;
+  border-top: 1px solid var(--border);
+  display: flex; justify-content: space-between; align-items: center;
+}
+.asset-name { font-size: 13px; font-weight: 700; color: var(--text); }
+.asset-file { font-size: 11px; color: var(--text-muted); font-family: monospace; }
+
+/* ── The actual logo assets rendered inline ── */
+
+/* Icon 01 */
+.icon-01 { width: 80px; height: 80px; background: var(--primary); border-radius: 50%; }
+
+/* Icon 11 */
+.icon-11-wrap { width: 80px; height: 80px; position: relative; display: flex; align-items: center; justify-content: center; }
+.i11-bg { width: 80px; height: 80px; background: radial-gradient(circle at 35% 35%, #3b76f5, #0a2a6e); border-radius: 50%; position: absolute; }
+.i11-ring { width: 50px; height: 50px; background: rgba(255,255,255,0.14); border-radius: 50%; position: absolute; border: 1px solid rgba(255,255,255,0.28); }
+.i11-core { width: 18px; height: 18px; background: #fff; border-radius: 50%; position: absolute; }
+
+/* Wordmark */
+.wm { font-family: 'DM Serif Display', serif; font-style: italic; font-size: 48px; letter-spacing: -0.02em; line-height: 1; }
+.wm .eu-dark { color: var(--text); }
+.wm .eu-light { color: #fff; }
+.wm .da-dark { color: var(--primary); }
+.wm .da-light { color: var(--primary-light); }
+
+/* Lockup */
+.lockup { display: flex; align-items: center; gap: 14px; }
+</style>
+</head>
+<body>
+
+<div class="eyebrow">Export Package</div>
+<h1 class="title">Euda Logo Assets</h1>
+<p class="sub">8 SVG files — icons, wordmarks, and lockups. Light + dark variants of each.</p>
+
+<div class="section-label">Icons</div>
+<div class="asset-grid">
+
+  <div class="asset-card">
+    <div class="asset-stage light">
+      <div class="icon-01"></div>
+    </div>
+    <div class="asset-meta">
+      <div class="asset-name">Icon 01 — Flat</div>
+      <div class="asset-file">euda-icon-01-flat.svg</div>
+    </div>
+  </div>
+
+  <div class="asset-card">
+    <div class="asset-stage dark">
+      <div class="icon-11-wrap">
+        <div class="i11-bg"></div>
+        <div class="i11-ring"></div>
+        <div class="i11-core"></div>
+      </div>
+    </div>
+    <div class="asset-meta">
+      <div class="asset-name">Icon 11 — Glass</div>
+      <div class="asset-file">euda-icon-11-glass.svg</div>
+    </div>
+  </div>
+
+</div>
+
+<div class="section-label">Wordmark</div>
+<div class="asset-grid">
+
+  <div class="asset-card">
+    <div class="asset-stage light">
+      <div class="wm"><span class="eu-dark">Eu</span><span class="da-dark">da</span></div>
+    </div>
+    <div class="asset-meta">
+      <div class="asset-name">Wordmark — Light bg</div>
+      <div class="asset-file">euda-wordmark-dark.svg</div>
+    </div>
+  </div>
+
+  <div class="asset-card">
+    <div class="asset-stage dark">
+      <div class="wm"><span class="eu-light">Eu</span><span class="da-light">da</span></div>
+    </div>
+    <div class="asset-meta">
+      <div class="asset-name">Wordmark — Dark bg</div>
+      <div class="asset-file">euda-wordmark-light.svg</div>
+    </div>
+  </div>
+
+</div>
+
+<div class="section-label">Lockups — Icon 01</div>
+<div class="asset-grid">
+
+  <div class="asset-card">
+    <div class="asset-stage light">
+      <div class="lockup">
+        <div class="icon-01" style="width:48px;height:48px;flex-shrink:0"></div>
+        <div class="wm" style="font-size:36px;"><span class="eu-dark">Eu</span><span class="da-dark">da</span></div>
+      </div>
+    </div>
+    <div class="asset-meta">
+      <div class="asset-name">Lockup 01 — Light</div>
+      <div class="asset-file">euda-lockup-01-light.svg</div>
+    </div>
+  </div>
+
+  <div class="asset-card">
+    <div class="asset-stage dark">
+      <div class="lockup">
+        <div class="icon-01" style="width:48px;height:48px;flex-shrink:0"></div>
+        <div class="wm" style="font-size:36px;"><span class="eu-light">Eu</span><span class="da-light">da</span></div>
+      </div>
+    </div>
+    <div class="asset-meta">
+      <div class="asset-name">Lockup 01 — Dark</div>
+      <div class="asset-file">euda-lockup-01-dark.svg</div>
+    </div>
+  </div>
+
+</div>
+
+<div class="section-label">Lockups — Icon 11</div>
+<div class="asset-grid">
+
+  <div class="asset-card">
+    <div class="asset-stage subtle">
+      <div class="lockup">
+        <div class="icon-11-wrap" style="width:48px;height:48px;flex-shrink:0">
+          <div style="width:48px;height:48px;background:radial-gradient(circle at 35% 35%,#3b76f5,#0a2a6e);border-radius:50%;position:absolute"></div>
+          <div style="width:30px;height:30px;background:rgba(255,255,255,0.14);border-radius:50%;position:absolute;border:1px solid rgba(255,255,255,0.28)"></div>
+          <div style="width:11px;height:11px;background:#fff;border-radius:50%;position:absolute"></div>
+        </div>
+        <div class="wm" style="font-size:36px;"><span class="eu-dark">Eu</span><span class="da-dark">da</span></div>
+      </div>
+    </div>
+    <div class="asset-meta">
+      <div class="asset-name">Lockup 11 — Light</div>
+      <div class="asset-file">euda-lockup-11-light.svg</div>
+    </div>
+  </div>
+
+  <div class="asset-card">
+    <div class="asset-stage dark">
+      <div class="lockup">
+        <div class="icon-11-wrap" style="width:48px;height:48px;flex-shrink:0">
+          <div style="width:48px;height:48px;background:radial-gradient(circle at 35% 35%,#3b76f5,#0a2a6e);border-radius:50%;position:absolute"></div>
+          <div style="width:30px;height:30px;background:rgba(255,255,255,0.14);border-radius:50%;position:absolute;border:1px solid rgba(255,255,255,0.28)"></div>
+          <div style="width:11px;height:11px;background:#fff;border-radius:50%;position:absolute"></div>
+        </div>
+        <div class="wm" style="font-size:36px;"><span class="eu-light">Eu</span><span class="da-light">da</span></div>
+      </div>
+    </div>
+    <div class="asset-meta">
+      <div class="asset-name">Lockup 11 — Dark</div>
+      <div class="asset-file">euda-lockup-11-dark.svg</div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
