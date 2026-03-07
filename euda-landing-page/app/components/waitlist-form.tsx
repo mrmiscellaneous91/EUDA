@@ -1,0 +1,111 @@
+"use client";
+
+import { useState, FormEvent } from "react";
+import { ArrowRight, Users, CheckCircle2, Loader2 } from "lucide-react";
+
+export function WaitlistForm({ id }: { id?: string }) {
+    const [email, setEmail] = useState("");
+    const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+    const [message, setMessage] = useState("");
+
+    async function handleSubmit(e: FormEvent) {
+        e.preventDefault();
+        if (!email.trim()) return;
+
+        setStatus("loading");
+        try {
+            const res = await fetch("/api/waitlist", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ email }),
+            });
+
+            const data = await res.json();
+
+            if (res.ok) {
+                setStatus("success");
+                setMessage(data.message);
+                setEmail("");
+            } else {
+                setStatus("error");
+                setMessage(data.error);
+            }
+        } catch {
+            setStatus("error");
+            setMessage("Something went wrong. Please try again.");
+        }
+
+        // Reset status after 5s
+        setTimeout(() => {
+            setStatus("idle");
+            setMessage("");
+        }, 5000);
+    }
+
+    if (status === "success") {
+        return (
+            <div id={id} className="flex flex-col items-center gap-4">
+                <div className="flex items-center gap-3 px-6 py-4 bg-success/10 text-success rounded-2xl border border-success/20 font-semibold">
+                    <CheckCircle2 size={20} />
+                    {message}
+                </div>
+            </div>
+        );
+    }
+
+    return (
+        <div id={id} className="flex flex-col items-center gap-4">
+            <form
+                onSubmit={handleSubmit}
+                className="flex flex-col sm:flex-row gap-2 w-full max-w-lg p-1.5 bg-card rounded-2xl border border-border shadow-lg focus-within:border-primary/40 transition-all"
+            >
+                <input
+                    type="email"
+                    placeholder="Enter your email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                    className="flex-1 px-5 py-3 bg-transparent outline-none text-base font-medium"
+                />
+                <button
+                    type="submit"
+                    disabled={status === "loading"}
+                    className="px-6 py-3 bg-primary text-primary-foreground font-bold rounded-xl hover:bg-[#0e44b0] active:scale-[0.98] transition-all flex items-center justify-center gap-2 group whitespace-nowrap text-base disabled:opacity-70"
+                >
+                    {status === "loading" ? (
+                        <>
+                            <Loader2 size={18} className="animate-spin" />
+                            Joining...
+                        </>
+                    ) : (
+                        <>
+                            Join the Waitlist
+                            <ArrowRight
+                                size={18}
+                                className="group-hover:translate-x-1 transition-transform"
+                            />
+                        </>
+                    )}
+                </button>
+            </form>
+
+            {status === "error" && (
+                <p className="text-destructive text-sm font-medium">{message}</p>
+            )}
+
+            <div className="flex items-center gap-2 text-sm text-muted-foreground font-medium">
+                <div className="flex -space-x-2">
+                    {[1, 2, 3, 4].map((i) => (
+                        <div
+                            key={i}
+                            className="w-8 h-8 rounded-full border-2 border-background bg-muted flex items-center justify-center text-[10px] text-muted-foreground"
+                        >
+                            <Users size={12} />
+                        </div>
+                    ))}
+                </div>
+                Early users are reducing their rent by &euro;&ndash;&euro;70/month.
+            </div>
+        </div>
+    );
+}

@@ -1,5 +1,4 @@
 import {
-  ArrowRight,
   CheckCircle2,
   CircleDollarSign,
   Landmark,
@@ -7,11 +6,12 @@ import {
   ReceiptText,
   ShieldCheck,
   MinusCircle,
-  Users,
   Home,
 } from "lucide-react";
 import { Calculator } from "./components/calculator";
-import { EudaLogo, EudaLogoMuted } from "./components/euda-logo";
+import { EudaLogoMuted } from "./components/euda-logo";
+import { Header } from "./components/header";
+import { WaitlistForm } from "./components/waitlist-form";
 
 const steps = [
   {
@@ -44,12 +44,7 @@ export default function Page() {
   return (
     <div className="min-h-screen bg-background text-foreground selection:bg-primary/20">
       {/* Navigation */}
-      <nav className="p-6 md:px-12 flex justify-between items-center max-w-7xl mx-auto">
-        <EudaLogo />
-        <button className="hidden md:block text-sm font-semibold text-muted-foreground hover:text-primary transition-colors">
-          How it works
-        </button>
-      </nav>
+      <Header />
 
       <main className="max-w-7xl mx-auto px-6 pb-24 space-y-24">
         {/* Hero Section */}
@@ -71,39 +66,11 @@ export default function Page() {
             </p>
           </div>
 
-          <div className="flex flex-col items-center gap-4">
-            <div className="flex flex-col sm:flex-row gap-2 w-full max-w-lg p-1.5 bg-card rounded-2xl border border-border shadow-lg focus-within:border-primary/40 transition-all">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-5 py-3 bg-transparent outline-none text-base font-medium"
-              />
-              <button className="px-6 py-3 bg-primary text-primary-foreground font-bold rounded-xl hover:bg-[#0e44b0] active:scale-[0.98] transition-all flex items-center justify-center gap-2 group whitespace-nowrap text-base">
-                Join the Waitlist
-                <ArrowRight
-                  size={18}
-                  className="group-hover:translate-x-1 transition-transform"
-                />
-              </button>
-            </div>
-            <div className="flex items-center gap-2 text-sm text-muted-foreground font-medium">
-              <div className="flex -space-x-2">
-                {[1, 2, 3, 4].map((i) => (
-                  <div
-                    key={i}
-                    className="w-8 h-8 rounded-full border-2 border-background bg-muted flex items-center justify-center text-[10px] text-muted-foreground"
-                  >
-                    <Users size={12} />
-                  </div>
-                ))}
-              </div>
-              Early users are reducing their rent by &euro;30&ndash;&euro;70/month.
-            </div>
-          </div>
+          <WaitlistForm id="waitlist" />
         </section>
 
         {/* Bento Grid Section */}
-        <section className="grid grid-cols-1 md:grid-cols-12 gap-4 auto-rows-[minmax(160px,auto)]">
+        <section id="how-it-works" className="grid grid-cols-1 md:grid-cols-12 gap-4 auto-rows-[minmax(160px,auto)] scroll-mt-24">
           {/* Main Feature: How it Works */}
           <div className="md:col-span-8 md:row-span-3 bg-muted/50 rounded-2xl border border-border p-8 md:p-12 space-y-12 relative overflow-hidden group">
             <div className="space-y-3 relative z-10">
@@ -185,6 +152,20 @@ export default function Page() {
           </div>
         </section>
 
+        {/* About Section */}
+        <section id="about" className="max-w-3xl mx-auto text-center space-y-6 scroll-mt-24">
+          <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight">
+            About EUDA
+          </h2>
+          <p className="text-lg text-muted-foreground font-medium leading-relaxed">
+            EUDA is building the financial layer for renters across Europe.
+            We believe you shouldn&apos;t have to move to save money on rent.
+            By combining smart spending insights, bill optimization, and
+            cashback rewards, we turn your everyday habits into real rent
+            reductions — automatically.
+          </p>
+        </section>
+
         {/* Final CTA */}
         <section className="bg-muted py-24 rounded-2xl px-6 text-center space-y-12">
           <div className="max-w-3xl mx-auto space-y-6">
@@ -199,9 +180,12 @@ export default function Page() {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <button className="px-10 py-5 bg-primary text-primary-foreground font-extrabold rounded-xl text-xl hover:bg-[#0e44b0] hover:shadow-2xl hover:shadow-primary/20 transition-all hover:-translate-y-0.5 active:scale-95">
+            <a
+              href="#waitlist"
+              className="px-10 py-5 bg-primary text-primary-foreground font-extrabold rounded-xl text-xl hover:bg-[#0e44b0] hover:shadow-2xl hover:shadow-primary/20 transition-all hover:-translate-y-0.5 active:scale-95"
+            >
               Start Saving Now
-            </button>
+            </a>
             <p className="text-muted-foreground font-semibold text-sm flex items-center gap-2">
               <CheckCircle2 size={18} className="text-success" />
               No credit checks required
