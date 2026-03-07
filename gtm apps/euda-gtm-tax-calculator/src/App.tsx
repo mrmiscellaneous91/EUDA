@@ -29,6 +29,7 @@ import type { SpendingCategory } from './lib/taxCalculations';
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 
+// @ts-ignore - Wuchale generated loader has no type declarations
 import { getRuntime } from './locales/main.loader.js';
 import spendingTranslationsEs from './lib/translations-es.json';
 
@@ -506,7 +507,7 @@ export default function App() {
                               const p = payload[0].payload;
                               return (
                                 <div className="bg-popover border border-border p-4 rounded-2xl shadow-2xl animate-in fade-in zoom-in duration-200">
-                                  <p className="font-bold text-sm mb-1">{_(payload[0].name)}</p>
+                                  <p className="font-bold text-sm mb-1">{_(String(payload[0].name ?? ''))}</p>
                                   <p className="text-primary text-xl font-black mb-1">€{Number(payload[0].value).toLocaleString()}</p>
                                   <p className="text-xs text-muted-foreground">{p.percentage}% {_('of your total tax')}</p>
                                   {p.hasSubcategories && !selectedCategory && (
@@ -554,7 +555,7 @@ export default function App() {
                               const p = payload[0].payload;
                               return (
                                 <div className="bg-popover border border-border p-4 rounded-2xl shadow-2xl animate-in fade-in zoom-in duration-200">
-                                  <p className="font-bold text-sm mb-1">{_(payload[0].name)}</p>
+                                  <p className="font-bold text-sm mb-1">{_(String(payload[0].name ?? ''))}</p>
                                   <p className="text-primary text-xl font-black mb-1">€{Number(payload[0].value).toLocaleString()}</p>
                                   <p className="text-xs text-muted-foreground">{p.percentage}% {_('of total')}</p>
                                 </div>
