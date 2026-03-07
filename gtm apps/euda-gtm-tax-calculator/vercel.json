@@ -1,0 +1,13 @@
+{
+    "cleanUrls": true,
+    "rewrites": [
+        {
+            "source": "/tax-calculator/spain/(.*)",
+            "destination": "/$1"
+        },
+        {
+            "source": "/tax-calculator/spain",
+            "destination": "/index.html"
+        }
+    ]
+}
