@@ -15,7 +15,7 @@ const dmSerif = DM_Serif_Display({
 });
 
 export const metadata: Metadata = {
-  title: "EUDA | Lower your rent. Without moving.",
+  title: "EUDA - Make Rent Work",
   description:
     "EUDA turns everyday spending, bill switching, and smart timing into automatic rent reductions.",
   icons: {
