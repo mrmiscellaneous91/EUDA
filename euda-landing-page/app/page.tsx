@@ -1,45 +1,11 @@
 import {
   CheckCircle2,
-  CircleDollarSign,
-  Landmark,
-  Sparkles,
-  ReceiptText,
-  ShieldCheck,
-  MinusCircle,
-  Home,
   MessageCircle,
+  ArrowRight,
 } from "lucide-react";
-import { Calculator } from "./components/calculator";
 import { EudaLogoMuted } from "./components/euda-logo";
 import { Header } from "./components/header";
 import { WaitlistForm } from "./components/waitlist-form";
-
-const steps = [
-  {
-    step: "01",
-    title: "Pay rent early",
-    desc: "Unlock a guaranteed bonus through EUDA.",
-    icon: CircleDollarSign,
-  },
-  {
-    step: "02",
-    title: "Connect bank",
-    desc: "We securely find savings opportunities.",
-    icon: Landmark,
-  },
-  {
-    step: "03",
-    title: "Earn credits",
-    desc: "Automatic rewards on every purchase.",
-    icon: Sparkles,
-  },
-  {
-    step: "04",
-    title: "Pay less",
-    desc: "Credits apply to your next rent payment.",
-    icon: ReceiptText,
-  },
-];
 
 export default function Page() {
   return (
@@ -47,22 +13,23 @@ export default function Page() {
       {/* Navigation */}
       <Header />
 
-      <main className="max-w-7xl mx-auto px-6 pb-24 space-y-24">
+      <main className="max-w-7xl mx-auto px-6 pb-24 space-y-32">
         {/* Hero Section */}
-        <section className="pt-8 md:pt-20 space-y-8 text-center">
-          <div className="space-y-5 max-w-4xl mx-auto">
+        <section className="pt-8 md:pt-24 space-y-10 text-center">
+          <div className="space-y-6 max-w-4xl mx-auto">
             <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight leading-[0.95] text-balance">
-              Lower your rent.
+              You&apos;ve paid tens of thousands in rent.
               <br />
               <span className="text-primary font-[family-name:var(--font-dm-serif)] italic">
-                Without moving.
+                What do you have to show for it?
               </span>
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground font-medium max-w-xl mx-auto text-balance">
-              EUDA turns everyday spending, bill switching, and smart timing
-              into{" "}
+            <p className="text-lg md:text-xl text-muted-foreground font-medium max-w-2xl mx-auto leading-relaxed text-balance">
+              EUDA is the first platform that takes a slice of what rent costs
+              you and puts it somewhere it can grow. You pay the same. Your
+              landlord gets the same.{" "}
               <span className="text-foreground font-semibold">
-                automatic rent reductions.
+                You just stop leaving empty-handed.
               </span>
             </p>
           </div>
@@ -70,122 +37,127 @@ export default function Page() {
           <WaitlistForm id="waitlist" />
         </section>
 
-        {/* Bento Grid Section */}
-        <section id="how-it-works" className="grid grid-cols-1 md:grid-cols-12 gap-4 auto-rows-[minmax(160px,auto)] scroll-mt-24">
-          {/* Main Feature: How it Works */}
-          <div className="md:col-span-8 md:row-span-3 bg-muted/50 rounded-2xl border border-border p-8 md:p-12 space-y-12 relative overflow-hidden group">
-            <div className="space-y-3 relative z-10">
-              <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight">
-                How it Works
-              </h2>
-              <p className="text-lg text-muted-foreground font-medium">
-                The simple path to a cheaper home.
-              </p>
-            </div>
+        {/* How It Works Section */}
+        <section
+          id="how-it-works"
+          className="scroll-mt-24 space-y-12"
+        >
+          <div className="max-w-3xl mx-auto text-center space-y-4">
+            <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight">
+              How it Works
+            </h2>
+          </div>
 
-            <div className="grid sm:grid-cols-2 gap-8 relative z-10">
-              {steps.map((item, i) => (
-                <div key={i} className="flex gap-4 group/item">
-                  <div className="w-11 h-11 rounded-xl bg-background border border-border flex items-center justify-center text-primary shrink-0 group-hover/item:border-primary/40 transition-colors">
-                    <item.icon size={22} />
-                  </div>
-                  <div className="space-y-1">
-                    <h3 className="font-bold text-sm flex items-center gap-2">
-                      <span className="text-[10px] text-primary/50 font-mono tracking-widest uppercase">
-                        {item.step}
-                      </span>
-                      {item.title}
-                    </h3>
-                    <p className="text-sm text-muted-foreground font-medium leading-relaxed">
-                      {item.desc}
-                    </p>
-                  </div>
+          <div className="max-w-3xl mx-auto space-y-8">
+            <div className="bg-muted/50 rounded-2xl border border-border p-8 md:p-12 space-y-6 relative overflow-hidden group">
+              <p className="text-lg md:text-xl text-muted-foreground font-medium leading-relaxed">
+                Every month you pay rent through EUDA, a portion goes into your{" "}
+                <span className="text-primary font-bold">Rent Pot</span> — built
+                from interest, savings on utilities, and cashback on local
+                spending.
+              </p>
+              <p className="text-lg md:text-xl text-muted-foreground font-medium leading-relaxed">
+                It adds up quietly. After two years, you have real money that
+                came entirely from rent you were already paying.
+              </p>
+              <div className="flex items-center gap-3 pt-2">
+                <div className="flex items-center gap-2 px-4 py-2 bg-background rounded-full border border-border text-sm font-semibold">
+                  <CheckCircle2 size={16} className="text-emerald-500" />
+                  No fees
                 </div>
-              ))}
-            </div>
-
-            <div className="absolute -bottom-16 -right-16 w-72 h-72 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/8 transition-colors" />
-          </div>
-
-          {/* Interactive Calculator */}
-          <Calculator />
-
-          {/* Benefit: No Loans */}
-          <div className="md:col-span-3 md:row-span-2 bg-card rounded-2xl border border-border p-6 flex flex-col justify-center items-center text-center space-y-3 hover:border-primary/40 transition-colors duration-300">
-            <div className="w-10 h-10 rounded-full bg-destructive/10 text-destructive flex items-center justify-center">
-              <MinusCircle size={20} />
-            </div>
-            <div>
-              <p className="text-lg font-extrabold leading-tight">No loans.</p>
-              <p className="text-xs text-muted-foreground font-semibold">
-                Ever.
-              </p>
-            </div>
-          </div>
-
-          {/* Benefit: No Moving */}
-          <div className="md:col-span-3 md:row-span-2 bg-card rounded-2xl border border-border p-6 flex flex-col justify-center items-center text-center space-y-3 hover:border-primary/40 transition-colors duration-300">
-            <div className="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center">
-              <Home size={20} />
-            </div>
-            <div>
-              <p className="text-lg font-extrabold leading-tight">
-                No moving.
-              </p>
-              <p className="text-xs text-muted-foreground font-semibold">
-                Stay put.
-              </p>
-            </div>
-          </div>
-
-          {/* Trust/Security */}
-          <div className="md:col-span-6 md:row-span-2 bg-[#101622] text-white rounded-2xl p-8 flex items-center gap-6 group">
-            <div className="w-16 h-16 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-[#3b76f5] group-hover:scale-110 transition-transform duration-500 shrink-0">
-              <ShieldCheck size={36} />
-            </div>
-            <div className="space-y-1">
-              <h3 className="text-lg font-bold">Secure by Design</h3>
-              <p className="text-sm text-[#8ba0c0] font-medium">
-                Bank-level encryption. No awkward landlord conversations. Just
-                lower rent.
-              </p>
+                <div className="flex items-center gap-2 px-4 py-2 bg-background rounded-full border border-border text-sm font-semibold">
+                  <CheckCircle2 size={16} className="text-emerald-500" />
+                  No catches
+                </div>
+                <div className="flex items-center gap-2 px-4 py-2 bg-background rounded-full border border-border text-sm font-semibold">
+                  <CheckCircle2 size={16} className="text-emerald-500" />
+                  Your landlord doesn&apos;t need to do anything
+                </div>
+              </div>
+              <div className="absolute -bottom-16 -right-16 w-72 h-72 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/8 transition-colors" />
             </div>
           </div>
         </section>
 
+        {/* Social Proof */}
+        <section className="max-w-3xl mx-auto text-center space-y-6">
+          <div className="inline-flex items-center gap-3 bg-muted/50 border border-border rounded-full px-6 py-3">
+            <div className="flex -space-x-2">
+              {[...Array(5)].map((_, i) => (
+                <div
+                  key={i}
+                  className="w-8 h-8 rounded-full bg-primary/20 border-2 border-background flex items-center justify-center"
+                >
+                  <span className="text-[10px] font-bold text-primary">
+                    {String.fromCharCode(65 + i)}
+                  </span>
+                </div>
+              ))}
+            </div>
+            <p className="text-sm font-semibold text-muted-foreground">
+              Built by lifelong renters who are done watching it disappear.
+            </p>
+          </div>
+        </section>
+
         {/* About Section */}
-        <section id="about" className="max-w-3xl mx-auto text-center space-y-6 scroll-mt-24">
-          <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight">
-            About EUDA
-          </h2>
-          <p className="text-lg text-muted-foreground font-medium leading-relaxed">
-            EUDA is building the financial layer for renters across Europe.
-            We believe you shouldn&apos;t have to move to save money on rent.
-            By combining smart spending insights, bill optimization, and
-            cashback rewards, we turn your everyday habits into real rent
-            reductions — automatically.
-          </p>
+        <section id="about" className="scroll-mt-24">
+          <div className="max-w-3xl mx-auto space-y-8">
+            <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-center">
+              About EUDA
+            </h2>
+            <div className="space-y-6 text-lg text-muted-foreground font-medium leading-relaxed">
+              <p>
+                Renting was supposed to be temporary. For most of us, it
+                isn&apos;t anymore.
+              </p>
+              <p>
+                The average renter spends{" "}
+                <span className="text-foreground font-bold">
+                  40% of their take-home pay
+                </span>{" "}
+                on rent. None of it comes back.
+              </p>
+              <p>
+                EUDA doesn&apos;t change what you pay. It changes what happens to
+                it.
+              </p>
+              <p>
+                We intercept a small portion of what was already leaving — from
+                interest on your payment, from utility switches, from local
+                spending — and we put it in a{" "}
+                <span className="text-primary font-bold">Rent Pot</span> with
+                your name on it. It&apos;s yours. It moves with you when you
+                move. And it grows every single month, whether you think about it
+                or not.
+              </p>
+              <p className="text-foreground font-semibold">
+                We&apos;re building this now. If you&apos;re a renter who&apos;s
+                done watching rent disappear, get on the list.
+              </p>
+            </div>
+          </div>
         </section>
 
         {/* Final CTA */}
         <section className="bg-muted py-24 rounded-2xl px-6 text-center space-y-12">
           <div className="max-w-3xl mx-auto space-y-6">
             <h2 className="text-4xl md:text-6xl font-extrabold leading-none tracking-tight">
-              Ready to drop
+              Be one of the first renters
               <br />
-              your rent?
+              <span className="text-primary font-[family-name:var(--font-dm-serif)] italic">
+                to lower your rent.
+              </span>
             </h2>
-            <p className="text-lg text-muted-foreground font-medium">
-              Join 2,400+ smart renters who are already seeing results.
-            </p>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="#waitlist"
-              className="px-10 py-5 bg-primary text-primary-foreground font-extrabold rounded-xl text-xl hover:bg-[#0e44b0] hover:shadow-2xl hover:shadow-primary/20 transition-all hover:-translate-y-0.5 active:scale-95"
+              className="px-10 py-5 bg-primary text-primary-foreground font-extrabold rounded-xl text-xl hover:bg-[#0e44b0] hover:shadow-2xl hover:shadow-primary/20 transition-all hover:-translate-y-0.5 active:scale-95 flex items-center gap-3"
             >
-              Start Saving Now
+              Join the Waitlist
+              <ArrowRight size={20} />
             </a>
             <a
               href="https://discord.gg/wVpEAtb3"
@@ -196,10 +168,6 @@ export default function Page() {
               <MessageCircle size={24} className="text-[#5865F2]" />
               Join Community
             </a>
-            <p className="text-muted-foreground font-semibold text-sm flex items-center gap-2">
-              <CheckCircle2 size={18} className="text-success" />
-              No credit checks required
-            </p>
           </div>
         </section>
       </main>
