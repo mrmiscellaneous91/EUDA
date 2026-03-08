@@ -93,19 +93,7 @@ export function WaitlistForm({ id }: { id?: string }) {
                 <p className="text-destructive text-sm font-medium">{message}</p>
             )}
 
-            <div className="flex items-center gap-2 text-sm text-muted-foreground font-medium">
-                <div className="flex -space-x-2">
-                    {[1, 2, 3, 4].map((i) => (
-                        <div
-                            key={i}
-                            className="w-8 h-8 rounded-full border-2 border-background bg-muted flex items-center justify-center text-[10px] text-muted-foreground"
-                        >
-                            <Users size={12} />
-                        </div>
-                    ))}
-                </div>
-                Early users are reducing their rent by &euro;&ndash;&euro;70/month.
-            </div>
+
         </div>
     );
 }

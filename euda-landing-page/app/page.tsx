@@ -20,7 +20,7 @@ export default function Page() {
             <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight leading-[0.95] text-balance">
               You&apos;ve paid tens of thousands in rent.
               <br />
-              <span className="text-primary font-[family-name:var(--font-dm-serif)] italic">
+              <span className="text-primary font-[family-name:var(--font-dm-serif)] italic text-4xl md:text-5xl">
                 What do you have to show for it?
               </span>
             </h1>
@@ -57,7 +57,7 @@ export default function Page() {
                 spending.
               </p>
               <p className="text-lg md:text-xl text-muted-foreground font-medium leading-relaxed">
-                It adds up quietly. After two years, you have real money that
+                It adds up quietly. 12 months later you have real money that
                 came entirely from rent you were already paying.
               </p>
               <div className="flex items-center gap-3 pt-2">
@@ -82,16 +82,12 @@ export default function Page() {
         {/* Social Proof */}
         <section className="max-w-3xl mx-auto text-center space-y-6">
           <div className="inline-flex items-center gap-3 bg-muted/50 border border-border rounded-full px-6 py-3">
-            <div className="flex -space-x-2">
+            <div className="flex -space-x-1.5">
               {[...Array(5)].map((_, i) => (
                 <div
                   key={i}
-                  className="w-8 h-8 rounded-full bg-primary/20 border-2 border-background flex items-center justify-center"
-                >
-                  <span className="text-[10px] font-bold text-primary">
-                    {String.fromCharCode(65 + i)}
-                  </span>
-                </div>
+                  className="w-6 h-6 rounded-full bg-primary/70 border-2 border-background"
+                />
               ))}
             </div>
             <p className="text-sm font-semibold text-muted-foreground">
