@@ -9,9 +9,11 @@ import {
   ChevronDown,
   ChevronUp,
   Info,
-  Globe
+  Globe,
+  MessageCircle
 } from 'lucide-react';
 import { loadLocale } from 'wuchale/load-utils';
+import { EmailModal } from './components/EmailModal';
 
 import {
   BarChart,
@@ -66,6 +68,8 @@ export default function App() {
   const [isExplainerOpen, setIsExplainerOpen] = useState(false);
   const [email, setEmail] = useState('');
   const [currentLocale, setCurrentLocale] = useState('en');
+  const [isEmailModalOpen, setIsEmailModalOpen] = useState(false);
+  const [hasShownModal, setHasShownModal] = useState(false);
 
   const breakdown = useMemo(() => {
     const val = parseFloat(amount) || 0;
@@ -107,11 +111,11 @@ export default function App() {
   const handleShare = () => {
     const text = `I contributed €${breakdown.totalTax.toLocaleString()} to Spanish public services! 🇪🇸\nSee where your tax goes:`;
     const url = window.location.href;
+
     if (navigator.share) {
       navigator.share({ title: 'Tax Spend Calculator', text, url });
     } else {
       navigator.clipboard.writeText(`${text} ${url}`);
-      alert('Result copied to clipboard!');
     }
   };
 
@@ -131,16 +135,25 @@ export default function App() {
       <header className="border-b border-border/40 bg-card/30 backdrop-blur-md sticky top-0 z-50">
         <div className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="flex items-center gap-4">
+            <a href="/" className="flex items-center gap-4 hover:opacity-80 transition-opacity">
               <span className="text-2xl" style={{ fontFamily: "'DM Serif Display', serif" }}><span className="text-foreground">Eu</span><span className="text-primary">da</span></span>
               <div className="w-px h-8 bg-border/40" />
               <div className="flex items-center gap-2">
                 <h1 className="text-xl font-bold tracking-tight">Where do your taxes really go?</h1>
                 <span className="text-2xl" title="Spain">🇪🇸</span>
               </div>
-            </div>
+            </a>
           </div>
           <div className="flex items-center gap-3">
+            <a
+              href="https://discord.gg/wVpEAtb3"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden md:flex items-center gap-2 px-4 py-2 rounded-full border border-border/40 hover:bg-card/50 transition-all text-sm font-medium"
+            >
+              <MessageCircle size={16} className="text-[#5865F2]" />
+              {_('Join Community')}
+            </a>
             <button
               onClick={async () => {
                 const newLocale = currentLocale === 'en' ? 'es' : 'en';
@@ -165,6 +178,17 @@ export default function App() {
           </div>
         </div>
       </header>
+
+      <EmailModal
+        isOpen={isEmailModalOpen}
+        onClose={() => setIsEmailModalOpen(false)}
+        onSubmit={(email) => {
+          setEmail(email);
+          // Here you would typically send the email to your backend
+          console.log('Email submitted:', email);
+          alert(_('Thanks! We will send your breakdown shortly.'));
+        }}
+      />
 
       <main className="max-w-6xl mx-auto px-6 py-12 space-y-12">
         <div className="grid lg:grid-cols-12 gap-12">
@@ -208,7 +232,14 @@ export default function App() {
                   <input
                     type="number"
                     value={amount}
-                    onChange={(e) => setAmount(e.target.value)}
+                    onChange={(e) => {
+                      const val = e.target.value;
+                      setAmount(val);
+                      if (parseFloat(val) > 0 && !hasShownModal) {
+                        setIsEmailModalOpen(true);
+                        setHasShownModal(true);
+                      }
+                    }}
                     placeholder={_('Earnings...')}
                     className="w-full bg-card border-2 border-border/50 rounded-2xl py-6 pl-12 pr-28 text-2xl font-bold focus:border-primary focus:ring-0 transition-all outline-none"
                   />

@@ -1,17 +1,18 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, MessageCircle } from "lucide-react";
 import { EudaLogo } from "./euda-logo";
 
 const navLinks = [
-    { label: "How it works", href: "#how-it-works" },
     {
         label: "Tools",
+        href: "#",
         children: [
-            { label: "Tax Calculator — Spain", href: "/tax-calculator/spain" },
+            { label: "Tax Calculator", href: "/tax-calculator/spain" },
         ],
     },
+    { label: "Community", href: "https://discord.gg/wVpEAtb3", external: true },
     { label: "About", href: "#about" },
 ];
 
@@ -29,8 +30,7 @@ export function Header() {
     // Smooth scroll for anchor links
     function handleNavClick(href: string) {
         setMobileOpen(false);
-        setToolsOpen(false);
-        if (href.startsWith("#")) {
+        if (href.startsWith("#") && href !== "#") {
             const el = document.querySelector(href);
             el?.scrollIntoView({ behavior: "smooth", block: "start" });
         }
@@ -39,13 +39,13 @@ export function Header() {
     return (
         <header
             className={`sticky top-0 z-50 transition-all duration-300 ${scrolled
-                    ? "bg-background/80 backdrop-blur-xl border-b border-border shadow-sm"
-                    : "bg-transparent"
+                ? "bg-background/80 backdrop-blur-xl border-b border-border shadow-sm"
+                : "bg-transparent"
                 }`}
         >
             <nav className="max-w-7xl mx-auto px-6 md:px-12 h-16 flex items-center justify-between">
                 {/* Logo */}
-                <a href="#" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                <a href="/" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
                     <EudaLogo />
                 </a>
 
@@ -53,40 +53,50 @@ export function Header() {
                 <div className="hidden md:flex items-center gap-8">
                     {navLinks.map((link) =>
                         link.children ? (
-                            <div key={link.label} className="relative">
+                            <div
+                                key={link.label}
+                                className="relative group"
+                                onMouseEnter={() => setToolsOpen(true)}
+                                onMouseLeave={() => setToolsOpen(false)}
+                            >
                                 <button
-                                    onClick={() => setToolsOpen(!toolsOpen)}
-                                    onBlur={() => setTimeout(() => setToolsOpen(false), 150)}
-                                    className="flex items-center gap-1 text-sm font-semibold text-muted-foreground hover:text-primary transition-colors"
+                                    className="flex items-center gap-1 text-sm font-semibold text-muted-foreground hover:text-primary transition-colors py-4"
                                 >
                                     {link.label}
                                     <ChevronDown
                                         size={14}
-                                        className={`transition-transform ${toolsOpen ? "rotate-180" : ""}`}
+                                        className={`transition-transform group-hover:rotate-180`}
                                     />
                                 </button>
-                                {toolsOpen && (
-                                    <div className="absolute top-full left-0 mt-2 w-56 bg-card border border-border rounded-xl shadow-xl py-2 animate-in fade-in slide-in-from-top-2 duration-200">
-                                        {link.children.map((child) => (
-                                            <a
-                                                key={child.href}
-                                                href={child.href}
-                                                className="block px-4 py-2.5 text-sm font-medium text-muted-foreground hover:text-primary hover:bg-muted/50 transition-colors"
-                                            >
-                                                {child.label}
-                                            </a>
-                                        ))}
-                                    </div>
-                                )}
+                                <div className="absolute top-full left-0 w-56 bg-card border border-border rounded-xl shadow-xl py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 translate-y-2 group-hover:translate-y-0">
+                                    {link.children.map((child) => (
+                                        <a
+                                            key={child.href}
+                                            href={child.href}
+                                            className="block px-4 py-2.5 text-sm font-medium text-muted-foreground hover:text-primary hover:bg-muted/50 transition-colors"
+                                        >
+                                            {child.label}
+                                        </a>
+                                    ))}
+                                </div>
                             </div>
                         ) : (
-                            <button
+                            <a
                                 key={link.label}
-                                onClick={() => handleNavClick(link.href!)}
-                                className="text-sm font-semibold text-muted-foreground hover:text-primary transition-colors"
+                                href={link.href}
+                                target={link.external ? "_blank" : undefined}
+                                rel={link.external ? "noopener noreferrer" : undefined}
+                                onClick={(e) => {
+                                    if (link.href?.startsWith("#")) {
+                                        e.preventDefault();
+                                        handleNavClick(link.href);
+                                    }
+                                }}
+                                className="text-sm font-semibold text-muted-foreground hover:text-primary transition-colors flex items-center gap-2"
                             >
+                                {link.label === "Community" && <MessageCircle size={16} className="text-[#5865F2]" />}
                                 {link.label}
-                            </button>
+                            </a>
                         )
                     )}
                     <button
@@ -140,13 +150,22 @@ export function Header() {
                                     )}
                                 </div>
                             ) : (
-                                <button
+                                <a
                                     key={link.label}
-                                    onClick={() => handleNavClick(link.href!)}
-                                    className="w-full text-left py-3 text-base font-semibold text-muted-foreground hover:text-primary transition-colors"
+                                    href={link.href}
+                                    target={link.external ? "_blank" : undefined}
+                                    rel={link.external ? "noopener noreferrer" : undefined}
+                                    onClick={(e) => {
+                                        if (link.href?.startsWith("#")) {
+                                            e.preventDefault();
+                                            handleNavClick(link.href);
+                                        }
+                                    }}
+                                    className="w-full text-left py-3 text-base font-semibold text-muted-foreground hover:text-primary transition-colors flex items-center gap-3"
                                 >
+                                    {link.label === "Community" && <MessageCircle size={20} className="text-[#5865F2]" />}
                                     {link.label}
-                                </button>
+                                </a>
                             )
                         )}
                         <button

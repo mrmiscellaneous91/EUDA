@@ -7,6 +7,7 @@ import {
   ShieldCheck,
   MinusCircle,
   Home,
+  MessageCircle,
 } from "lucide-react";
 import { Calculator } from "./components/calculator";
 import { EudaLogoMuted } from "./components/euda-logo";
@@ -185,6 +186,15 @@ export default function Page() {
               className="px-10 py-5 bg-primary text-primary-foreground font-extrabold rounded-xl text-xl hover:bg-[#0e44b0] hover:shadow-2xl hover:shadow-primary/20 transition-all hover:-translate-y-0.5 active:scale-95"
             >
               Start Saving Now
+            </a>
+            <a
+              href="https://discord.gg/wVpEAtb3"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-10 py-5 bg-card border-2 border-border text-foreground font-extrabold rounded-xl text-xl hover:bg-muted transition-all flex items-center gap-3 active:scale-95"
+            >
+              <MessageCircle size={24} className="text-[#5865F2]" />
+              Join Community
             </a>
             <p className="text-muted-foreground font-semibold text-sm flex items-center gap-2">
               <CheckCircle2 size={18} className="text-success" />
