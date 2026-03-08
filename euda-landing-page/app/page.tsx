@@ -102,7 +102,7 @@ export default function Page() {
             <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-center">
               About EUDA
             </h2>
-            <div className="space-y-6 text-lg text-muted-foreground font-medium leading-relaxed">
+            <div className="space-y-6 text-lg text-muted-foreground font-medium leading-relaxed text-center">
               <p>
                 Renting was supposed to be temporary. For most of us, it
                 isn&apos;t anymore.
@@ -139,10 +139,10 @@ export default function Page() {
         <section className="bg-muted py-24 rounded-2xl px-6 text-center space-y-12">
           <div className="max-w-3xl mx-auto space-y-6">
             <h2 className="text-4xl md:text-6xl font-extrabold leading-none tracking-tight">
-              Start building your Rent Pot.
+              Make Rent
               <br />
               <span className="text-primary font-[family-name:var(--font-dm-serif)] italic">
-                Make Rent Work.
+                Work.
               </span>
             </h2>
           </div>
