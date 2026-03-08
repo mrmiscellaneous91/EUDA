@@ -52,9 +52,7 @@ export default function Page() {
             <div className="bg-muted/50 rounded-2xl border border-border p-8 md:p-12 space-y-6 relative overflow-hidden group text-center">
               <p className="text-lg md:text-xl text-muted-foreground font-medium leading-relaxed">
                 Every month you pay rent through EUDA, a portion goes into your{" "}
-                <span className="text-primary font-bold">Rent Pot</span> built
-                from interest, savings on utilities, and cashback on local
-                spending.
+                <span className="text-primary font-bold">Rent Pot</span>.
               </p>
               <p className="text-lg md:text-xl text-muted-foreground font-medium leading-relaxed">
                 It adds up quietly. 12 months later you have real money that
@@ -119,9 +117,9 @@ export default function Page() {
                 it.
               </p>
               <p>
-                We intercept a small portion of what was already leaving... from
+                We intercept a small portion of what was already leaving - from
                 interest on your payment, from utility switches, from local
-                spending ... and we put it in a{" "}
+                spending - and we put it in a{" "}
                 <span className="text-primary font-bold">Rent Pot</span> with
                 your name on it. It&apos;s yours. It moves with you when you
                 move. And it grows every single month, whether you think about it
