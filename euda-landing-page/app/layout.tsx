@@ -18,6 +18,12 @@ export const metadata: Metadata = {
   title: "EUDA | Lower your rent. Without moving.",
   description:
     "EUDA turns everyday spending, bill switching, and smart timing into automatic rent reductions.",
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.png", type: "image/png" },
+    ],
+  },
 };
 
 export default function RootLayout({

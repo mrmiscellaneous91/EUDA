@@ -136,7 +136,7 @@ export default function App() {
         <div className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <a href="/" className="flex items-center gap-4 hover:opacity-80 transition-opacity">
-              <span className="text-2xl" style={{ fontFamily: "'DM Serif Display', serif" }}><span className="text-foreground">Eu</span><span className="text-primary">da</span></span>
+              <img src="/euda-wordmark.svg" alt="EUDA" className="h-8 w-auto" />
               <div className="w-px h-8 bg-border/40" />
               <div className="flex items-center gap-2">
                 <h1 className="text-xl font-bold tracking-tight">Where do your taxes really go?</h1>
