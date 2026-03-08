@@ -1,0 +1,56 @@
+{
+    "hero": {
+        "headline": "You've paid tens of thousands in rent.",
+        "headline2": "What do you have to show for it?",
+        "subheadline": "EUDA is the first platform that takes a slice of what rent costs you and puts it somewhere it can grow. You pay the same. Your landlord gets the same.",
+        "subheadlineBold": "You just stop leaving empty-handed."
+    },
+    "waitlist": {
+        "placeholder": "Enter your email",
+        "button": "Join the Waitlist",
+        "joining": "Joining...",
+        "success": "You're on the list!"
+    },
+    "howItWorks": {
+        "title": "How it Works",
+        "p1": "Every month you pay rent through EUDA, a portion goes into your",
+        "rentPot": "Rent Pot",
+        "p2": "It adds up quietly. 12 months later you have real money that came entirely from rent you were already paying.",
+        "noFees": "No fees",
+        "noCatches": "No catches",
+        "landlord": "Your landlord doesn't need to do anything"
+    },
+    "socialProof": {
+        "text": "Built by lifelong renters who are done watching it disappear."
+    },
+    "about": {
+        "title": "About EUDA",
+        "p1": "Renting was supposed to be temporary. For most of us, it isn't anymore.",
+        "p2pre": "The average renter spends",
+        "p2bold": "40% of their take-home pay",
+        "p2post": "on rent. None of it comes back.",
+        "p3": "EUDA doesn't change what you pay. It changes what happens to it.",
+        "p4pre": "We intercept a small portion of what was already leaving - from interest on your payment, from utility switches, from local spending - and we put it in a",
+        "p4post": "with your name on it. It's yours. It moves with you when you move. And it grows every single month, whether you think about it or not.",
+        "p5": "We're building this now. If you're a renter who's done watching rent disappear, get on the list."
+    },
+    "cta": {
+        "headline": "Make Rent",
+        "headline2": "Work.",
+        "joinWaitlist": "Join the Waitlist",
+        "joinCommunity": "Join Community"
+    },
+    "nav": {
+        "tools": "Tools",
+        "taxCalculator": "Tax Calculator",
+        "community": "Community",
+        "about": "About",
+        "joinWaitlist": "Join Waitlist"
+    },
+    "footer": {
+        "terms": "Terms",
+        "privacy": "Privacy",
+        "contact": "Contact",
+        "copyright": "© 2026 EUDA. Built with love."
+    }
+}

@@ -1,0 +1,56 @@
+{
+    "hero": {
+        "headline": "Has pagado decenas de miles en alquiler.",
+        "headline2": "¿Qué tienes para mostrarlo?",
+        "subheadline": "EUDA es la primera plataforma que toma una parte de lo que te cuesta el alquiler y lo pone donde puede crecer. Pagas lo mismo. Tu casero recibe lo mismo.",
+        "subheadlineBold": "Simplemente dejas de irte con las manos vacías."
+    },
+    "waitlist": {
+        "placeholder": "Introduce tu email",
+        "button": "Únete a la lista",
+        "joining": "Uniéndose...",
+        "success": "¡Estás en la lista!"
+    },
+    "howItWorks": {
+        "title": "Cómo funciona",
+        "p1": "Cada mes que pagas el alquiler a través de EUDA, una parte va a tu",
+        "rentPot": "Bote de Alquiler",
+        "p2": "Se acumula silenciosamente. 12 meses después tienes dinero real que provino enteramente del alquiler que ya estabas pagando.",
+        "noFees": "Sin comisiones",
+        "noCatches": "Sin trampa",
+        "landlord": "Tu casero no necesita hacer nada"
+    },
+    "socialProof": {
+        "text": "Creado por inquilinos de toda la vida que están hartos de ver cómo desaparece."
+    },
+    "about": {
+        "title": "Sobre EUDA",
+        "p1": "El alquiler se suponía que era temporal. Para la mayoría de nosotros, ya no lo es.",
+        "p2pre": "El inquilino promedio gasta",
+        "p2bold": "el 40% de su sueldo neto",
+        "p2post": "en alquiler. Nada de eso vuelve.",
+        "p3": "EUDA no cambia lo que pagas. Cambia lo que pasa con ello.",
+        "p4pre": "Interceptamos una pequeña parte de lo que ya se iba - del interés de tu pago, de cambios de suministros, del gasto local - y lo ponemos en un",
+        "p4post": "con tu nombre. Es tuyo. Se mueve contigo cuando te mudas. Y crece cada mes, pienses en ello o no.",
+        "p5": "Estamos construyendo esto ahora. Si eres inquilino y estás harto de ver cómo desaparece el alquiler, apúntate."
+    },
+    "cta": {
+        "headline": "Haz que el alquiler",
+        "headline2": "Trabaje.",
+        "joinWaitlist": "Únete a la lista",
+        "joinCommunity": "Únete a la comunidad"
+    },
+    "nav": {
+        "tools": "Herramientas",
+        "taxCalculator": "Calculadora de Impuestos",
+        "community": "Comunidad",
+        "about": "Acerca de",
+        "joinWaitlist": "Únete"
+    },
+    "footer": {
+        "terms": "Términos",
+        "privacy": "Privacidad",
+        "contact": "Contacto",
+        "copyright": "© 2026 EUDA. Hecho con amor."
+    }
+}

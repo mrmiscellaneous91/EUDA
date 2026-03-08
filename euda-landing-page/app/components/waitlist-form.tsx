@@ -1,9 +1,11 @@
 "use client";
 
 import { useState, FormEvent } from "react";
-import { ArrowRight, Users, CheckCircle2, Loader2 } from "lucide-react";
+import { ArrowRight, CheckCircle2, Loader2 } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export function WaitlistForm({ id }: { id?: string }) {
+    const t = useTranslations("waitlist");
     const [email, setEmail] = useState("");
     const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
     const [message, setMessage] = useState("");
@@ -35,7 +37,6 @@ export function WaitlistForm({ id }: { id?: string }) {
             setMessage("Something went wrong. Please try again.");
         }
 
-        // Reset status after 5s
         setTimeout(() => {
             setStatus("idle");
             setMessage("");
@@ -61,7 +62,7 @@ export function WaitlistForm({ id }: { id?: string }) {
             >
                 <input
                     type="email"
-                    placeholder="Enter your email"
+                    placeholder={t("placeholder")}
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
@@ -75,11 +76,11 @@ export function WaitlistForm({ id }: { id?: string }) {
                     {status === "loading" ? (
                         <>
                             <Loader2 size={18} className="animate-spin" />
-                            Joining...
+                            {t("joining")}
                         </>
                     ) : (
                         <>
-                            Join the Waitlist
+                            {t("button")}
                             <ArrowRight
                                 size={18}
                                 className="group-hover:translate-x-1 transition-transform"
@@ -92,8 +93,6 @@ export function WaitlistForm({ id }: { id?: string }) {
             {status === "error" && (
                 <p className="text-destructive text-sm font-medium">{message}</p>
             )}
-
-
         </div>
     );
 }
