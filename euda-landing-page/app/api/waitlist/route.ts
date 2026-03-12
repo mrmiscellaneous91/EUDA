@@ -12,6 +12,7 @@ export async function POST(request: NextRequest) {
     try {
         const body = await request.json();
         const email = body.email?.trim()?.toLowerCase();
+        const city = body.city?.trim() || "Unknown";
 
         if (!email || !EMAIL_REGEX.test(email)) {
             return NextResponse.json(
@@ -33,6 +34,13 @@ export async function POST(request: NextRequest) {
         await redis.zadd("waitlist:emails", {
             score: Date.now(),
             member: email,
+        });
+
+        // Store detailed user info in a Hash
+        await redis.hset(`waitlist:user:${email}`, {
+            email,
+            city,
+            signup_date: new Date().toISOString(),
         });
 
         // Increment counter

@@ -7,6 +7,7 @@ import { useTranslations } from "next-intl";
 export function WaitlistForm({ id }: { id?: string }) {
     const t = useTranslations("waitlist");
     const [email, setEmail] = useState("");
+    const [city, setCity] = useState("");
     const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
     const [message, setMessage] = useState("");
 
@@ -19,7 +20,7 @@ export function WaitlistForm({ id }: { id?: string }) {
             const res = await fetch("/api/waitlist", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ email }),
+                body: JSON.stringify({ email, city }),
             });
 
             const data = await res.json();
@@ -28,6 +29,7 @@ export function WaitlistForm({ id }: { id?: string }) {
                 setStatus("success");
                 setMessage(data.message);
                 setEmail("");
+                setCity("");
             } else {
                 setStatus("error");
                 setMessage(data.error);
@@ -46,8 +48,8 @@ export function WaitlistForm({ id }: { id?: string }) {
     if (status === "success") {
         return (
             <div id={id} className="flex flex-col items-center gap-4">
-                <div className="flex items-center gap-3 px-6 py-4 bg-success/10 text-success rounded-2xl border border-success/20 font-semibold">
-                    <CheckCircle2 size={20} />
+                <div className="flex items-center gap-3 px-6 py-4 bg-success/10 text-success rounded-2xl border border-success/20 font-semibold text-center">
+                    <CheckCircle2 size={20} className="shrink-0" />
                     {message}
                 </div>
             </div>
@@ -55,10 +57,10 @@ export function WaitlistForm({ id }: { id?: string }) {
     }
 
     return (
-        <div id={id} className="flex flex-col items-center gap-4">
+        <div id={id} className="flex flex-col items-center gap-4 w-full">
             <form
                 onSubmit={handleSubmit}
-                className="flex flex-col sm:flex-row gap-2 w-full max-w-lg p-1.5 bg-card rounded-2xl border border-border shadow-lg focus-within:border-primary/40 transition-all"
+                className="flex flex-col sm:flex-row gap-2 w-full max-w-2xl p-1.5 bg-card rounded-2xl border border-border shadow-lg focus-within:border-primary/40 transition-all"
             >
                 <input
                     type="email"
@@ -66,7 +68,15 @@ export function WaitlistForm({ id }: { id?: string }) {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
-                    className="flex-1 px-5 py-3 bg-transparent outline-none text-base font-medium"
+                    className="flex-1 px-5 py-3 bg-transparent outline-none text-base font-medium min-w-0"
+                />
+                <div className="hidden sm:block w-px h-8 bg-border/50 self-center" />
+                <input
+                    type="text"
+                    placeholder={t("cityPlaceholder")}
+                    value={city}
+                    onChange={(e) => setCity(e.target.value)}
+                    className="flex-1 px-5 py-3 bg-transparent outline-none text-base font-medium min-w-0"
                 />
                 <button
                     type="submit"

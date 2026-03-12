@@ -1,20 +1,21 @@
-import { X, Mail, Sparkles } from 'lucide-react';
+import { X, Mail, Sparkles, Globe } from 'lucide-react';
 import { useState } from 'react';
 
 interface EmailModalProps {
     isOpen: boolean;
     onClose: () => void;
-    onSubmit: (email: string) => void;
+    onSubmit: (email: string, city: string) => void;
 }
 
 export function EmailModal({ isOpen, onClose, onSubmit }: EmailModalProps) {
     const [email, setEmail] = useState('');
+    const [city, setCity] = useState('');
 
     if (!isOpen) return null;
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        onSubmit(email);
+        onSubmit(email, city);
         onClose();
     };
 
@@ -46,18 +47,33 @@ export function EmailModal({ isOpen, onClose, onSubmit }: EmailModalProps) {
                     </div>
 
                     <form onSubmit={handleSubmit} className="space-y-4">
-                        <div className="relative group">
-                            <div className="absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground group-focus-within:text-primary transition-colors">
-                                <Mail size={20} />
+                        <div className="space-y-4">
+                            <div className="relative group">
+                                <div className="absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground group-focus-within:text-primary transition-colors">
+                                    <Mail size={20} />
+                                </div>
+                                <input
+                                    type="email"
+                                    required
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
+                                    placeholder="Enter your email"
+                                    className="w-full bg-muted/30 border-2 border-transparent rounded-2xl py-4 pl-12 pr-6 focus:border-primary focus:bg-card transition-all outline-none"
+                                />
                             </div>
-                            <input
-                                type="email"
-                                required
-                                value={email}
-                                onChange={(e) => setEmail(e.target.value)}
-                                placeholder="Enter your email"
-                                className="w-full bg-muted/30 border-2 border-transparent rounded-2xl py-4 pl-12 pr-6 focus:border-primary focus:bg-card transition-all outline-none"
-                            />
+                            <div className="relative group">
+                                <div className="absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground group-focus-within:text-primary transition-colors">
+                                    <Globe size={20} />
+                                </div>
+                                <input
+                                    type="text"
+                                    required
+                                    value={city}
+                                    onChange={(e) => setCity(e.target.value)}
+                                    placeholder="Enter your city"
+                                    className="w-full bg-muted/30 border-2 border-transparent rounded-2xl py-4 pl-12 pr-6 focus:border-primary focus:bg-card transition-all outline-none"
+                                />
+                            </div>
                         </div>
                         <button
                             type="submit"

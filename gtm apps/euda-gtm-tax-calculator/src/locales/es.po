@@ -19,8 +19,8 @@ msgid ""
 "I contributed €{0} to Spanish public services! 🇪🇸\n"
 "See where your tax goes:"
 msgstr ""
-"¡He contribuido con €{0} a los servicios públicos españoles! 🇪🇸\n"
-"Mira a dónde van tus impuestos:"
+"¡He aportado €{0} a los servicios públicos! 🇪🇸\n"
+"Mira a dónde va tu dinero:"
 
 #: src/App.tsx
 msgid "Tax Spend Calculator"
@@ -157,7 +157,7 @@ msgstr ""
 
 #: src/App.tsx
 msgid "Where do your taxes really go?"
-msgstr "¿A dónde van realmente tus impuestos?"
+msgstr "¿A dónde va realmente tu dinero?"
 
 #~ msgid "text-2xl"
 #~ msgstr ""
@@ -234,7 +234,7 @@ msgstr ""
 
 #: src/App.tsx
 msgid "Calculate your impact"
-msgstr "Calcula tu impacto"
+msgstr "Calcula lo que aportas"
 
 #~ msgid "text-muted-foreground"
 #~ msgstr ""
@@ -322,7 +322,7 @@ msgstr ""
 
 #: src/App.tsx
 msgid "Total Contribution"
-msgstr "Contribución Total"
+msgstr "Aportación Total"
 
 #~ msgid "text-4xl font-black text-primary"
 #~ msgstr ""
@@ -2360,3 +2360,22 @@ msgid ""
 "Be the first to know when we launch the full experience.\n"
 ""
 msgstr ""
+#: src/App.tsx
+msgid "Enter your email"
+msgstr "Email"
+
+#: src/App.tsx
+msgid "Enter your city"
+msgstr "Ciudad"
+
+#: src/App.tsx
+msgid "Interested"
+msgstr "Me interesa"
+
+#: src/App.tsx
+msgid "Welcome to the waitlist! We will be in touch soon."
+msgstr "¡Ya estás en la lista! Te avisaremos muy pronto."
+
+#: src/App.tsx
+msgid "Something went wrong. Please try again."
+msgstr "Algo ha salido mal. Inténtalo de nuevo."

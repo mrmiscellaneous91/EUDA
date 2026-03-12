@@ -6,16 +6,17 @@
         "subheadlineBold": "Simplemente dejas de irte con las manos vacías."
     },
     "waitlist": {
-        "placeholder": "Introduce tu email",
-        "button": "Únete a la lista",
-        "joining": "Uniéndose...",
-        "success": "¡Estás en la lista!"
+        "placeholder": "Email",
+        "cityPlaceholder": "Ciudad",
+        "button": "Apúntate",
+        "joining": "Apuntándote...",
+        "success": "¡Ya estás en la lista!"
     },
     "howItWorks": {
         "title": "Cómo funciona",
         "p1": "Cada mes que pagas el alquiler a través de EUDA, una parte va a tu",
-        "rentPot": "Bote de Alquiler",
-        "p2": "Se acumula silenciosamente. 12 meses después tienes dinero real que provino enteramente del alquiler que ya estabas pagando.",
+        "rentPot": "Hucha de Alquiler",
+        "p2": "Se acumula sin que te des cuenta. 12 meses después tienes ahorros reales que han salido íntegramente del alquiler que ya estabas pagando.",
         "noFees": "Sin comisiones",
         "noCatches": "Sin trampa",
         "landlord": "Tu casero no necesita hacer nada"

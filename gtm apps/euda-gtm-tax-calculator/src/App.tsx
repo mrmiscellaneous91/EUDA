@@ -66,7 +66,6 @@ export default function App() {
   const [viewMode, setViewMode] = useState<'bar' | 'pie'>('bar');
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [isExplainerOpen, setIsExplainerOpen] = useState(false);
-  const [email, setEmail] = useState('');
   const [currentLocale, setCurrentLocale] = useState('en');
   const [isEmailModalOpen, setIsEmailModalOpen] = useState(false);
   const [hasShownModal, setHasShownModal] = useState(false);
@@ -182,11 +181,23 @@ export default function App() {
       <EmailModal
         isOpen={isEmailModalOpen}
         onClose={() => setIsEmailModalOpen(false)}
-        onSubmit={(email) => {
-          setEmail(email);
-          // Here you would typically send the email to your backend
-          console.log('Email submitted:', email);
-          alert(_('Thanks! We will send your breakdown shortly.'));
+        onSubmit={async (email, city) => {
+          try {
+            const res = await fetch('/api/waitlist', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ email, city }),
+            });
+            if (res.ok) {
+              alert(_('Welcome to the waitlist! We will be in touch soon.'));
+            } else {
+              const data = await res.json();
+              alert(data.error || _('Something went wrong. Please try again.'));
+            }
+          } catch (error) {
+            console.error('Waitlist error:', error);
+            alert(_('Something went wrong. Please try again.'));
+          }
         }}
       />
 
@@ -659,12 +670,47 @@ export default function App() {
             </p>
           </div>
 
-          <form className="max-w-md mx-auto flex flex-col sm:flex-row gap-3" onSubmit={(e) => { e.preventDefault(); alert('Thanks for your interest!'); setEmail(''); }}>
+          <form 
+            className="max-w-2xl mx-auto flex flex-col sm:flex-row gap-3" 
+            onSubmit={async (e) => { 
+                e.preventDefault(); 
+                const form = e.target as HTMLFormElement;
+                const emailInput = form.elements.namedItem('email') as HTMLInputElement;
+                const cityInput = form.elements.namedItem('city') as HTMLInputElement;
+                const emailVal = emailInput.value;
+                const cityVal = cityInput.value;
+
+                try {
+                  const res = await fetch('/api/waitlist', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email: emailVal, city: cityVal }),
+                  });
+                  if (res.ok) {
+                    alert(_('Welcome to the waitlist! We will be in touch soon.'));
+                    emailInput.value = '';
+                    cityInput.value = '';
+                  } else {
+                    const data = await res.json();
+                    alert(data.error || _('Something went wrong. Please try again.'));
+                  }
+                } catch (error) {
+                  console.error('Waitlist error:', error);
+                  alert(_('Something went wrong. Please try again.'));
+                }
+            }}
+          >
             <input
               type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              name="email"
               placeholder={_('Enter your email')}
+              required
+              className="flex-1 bg-card border-2 border-border/50 rounded-2xl px-6 py-4 focus:border-primary outline-none transition-all"
+            />
+            <input
+              type="text"
+              name="city"
+              placeholder={_('Enter your city')}
               required
               className="flex-1 bg-card border-2 border-border/50 rounded-2xl px-6 py-4 focus:border-primary outline-none transition-all"
             />
