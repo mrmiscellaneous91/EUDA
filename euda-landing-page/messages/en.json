@@ -7,6 +7,7 @@
     },
     "waitlist": {
         "placeholder": "Enter your email",
+        "cityPlaceholder": "City",
         "button": "Join the Waitlist",
         "joining": "Joining...",
         "success": "You're on the list!"
