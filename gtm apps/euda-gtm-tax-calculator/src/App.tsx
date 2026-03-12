@@ -138,7 +138,7 @@ export default function App() {
               <img src="/euda-wordmark.svg" alt="EUDA" className="h-8 w-auto" />
               <div className="w-px h-8 bg-border/40" />
               <div className="flex items-center gap-2">
-                <h1 className="text-xl font-bold tracking-tight">Where do your taxes really go?</h1>
+                <h1 className="text-xl font-bold tracking-tight">{_('Where do your taxes really go?')}</h1>
                 <span className="text-2xl" title="Spain">🇪🇸</span>
               </div>
             </a>
@@ -172,7 +172,7 @@ export default function App() {
               className="flex items-center gap-2 px-4 py-2 rounded-full bg-primary text-primary-foreground hover:opacity-90 transition-all shadow-sm font-medium text-sm"
             >
               <Share2 size={16} />
-              Share Result
+              {_('Share Result')}
             </button>
           </div>
         </div>
@@ -181,6 +181,7 @@ export default function App() {
       <EmailModal
         isOpen={isEmailModalOpen}
         onClose={() => setIsEmailModalOpen(false)}
+        translate={_}
         onSubmit={async (email, city) => {
           try {
             const res = await fetch('/api/waitlist', {
@@ -665,8 +666,7 @@ export default function App() {
           <div className="max-w-2xl mx-auto space-y-4">
             <h2 className="text-3xl font-bold">{_("Lower next month's rent. Without moving.")}</h2>
             <p className="text-muted-foreground">
-              EUDA helps renters turn everyday spending, bill switching, and smart timing into automatic rent reductions.
-              Be the first to know when we launch the full experience.
+              {_('EUDA helps renters turn everyday spending, bill switching, and smart timing into automatic rent reductions. Be the first to know when we launch.')}
             </p>
           </div>
 

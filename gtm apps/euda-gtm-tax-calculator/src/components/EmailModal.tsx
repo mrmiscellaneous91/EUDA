@@ -5,9 +5,10 @@ interface EmailModalProps {
     isOpen: boolean;
     onClose: () => void;
     onSubmit: (email: string, city: string) => void;
+    translate: (s: string) => string;
 }
 
-export function EmailModal({ isOpen, onClose, onSubmit }: EmailModalProps) {
+export function EmailModal({ isOpen, onClose, onSubmit, translate: _ }: EmailModalProps) {
     const [email, setEmail] = useState('');
     const [city, setCity] = useState('');
 
@@ -39,9 +40,9 @@ export function EmailModal({ isOpen, onClose, onSubmit }: EmailModalProps) {
                             <Sparkles size={32} />
                         </div>
                         <div className="space-y-2">
-                            <h2 className="text-2xl font-bold tracking-tight">Save your result & join EUDA</h2>
+                            <h2 className="text-2xl font-bold tracking-tight">{_('Save your result & join EUDA')}</h2>
                             <p className="text-muted-foreground">
-                                We'll email you this breakdown and an exclusive invite to lower your rent with EUDA.
+                                {_("We'll send you this breakdown and an exclusive invite to start saving on rent with EUDA.")}
                             </p>
                         </div>
                     </div>
@@ -57,7 +58,7 @@ export function EmailModal({ isOpen, onClose, onSubmit }: EmailModalProps) {
                                     required
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
-                                    placeholder="Enter your email"
+                                    placeholder={_('Enter your email')}
                                     className="w-full bg-muted/30 border-2 border-transparent rounded-2xl py-4 pl-12 pr-6 focus:border-primary focus:bg-card transition-all outline-none"
                                 />
                             </div>
@@ -70,7 +71,7 @@ export function EmailModal({ isOpen, onClose, onSubmit }: EmailModalProps) {
                                     required
                                     value={city}
                                     onChange={(e) => setCity(e.target.value)}
-                                    placeholder="Enter your city"
+                                    placeholder={_('Enter your city')}
                                     className="w-full bg-muted/30 border-2 border-transparent rounded-2xl py-4 pl-12 pr-6 focus:border-primary focus:bg-card transition-all outline-none"
                                 />
                             </div>
@@ -79,12 +80,12 @@ export function EmailModal({ isOpen, onClose, onSubmit }: EmailModalProps) {
                             type="submit"
                             className="w-full py-4 bg-primary text-primary-foreground font-bold rounded-2xl hover:opacity-90 transition-all shadow-lg active:scale-[0.98]"
                         >
-                            Get My Breakdown
+                            {_('Get My Breakdown')}
                         </button>
                     </form>
 
                     <p className="text-[10px] text-center text-muted-foreground uppercase tracking-widest font-bold">
-                        No spam. Just rent savings.
+                        {_('No spam. Just rent savings.')}
                     </p>
                 </div>
             </div>

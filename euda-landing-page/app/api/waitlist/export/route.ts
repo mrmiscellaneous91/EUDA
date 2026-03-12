@@ -19,14 +19,16 @@ export async function GET(request: NextRequest) {
             withScores: true,
         });
 
-        // Build CSV
-        let csv = "Email,Signed Up\n";
+        // Build CSV with city from user hash
+        let csv = "Email,City,Signed Up\n";
 
         for (let i = 0; i < results.length; i += 2) {
             const email = results[i] as string;
             const timestamp = results[i + 1] as number;
             const date = new Date(timestamp).toISOString();
-            csv += `${email},${date}\n`;
+            const userInfo = await redis.hgetall(`waitlist:user:${email}`);
+            const city = (userInfo as Record<string, string>)?.city || "Unknown";
+            csv += `${email},${city},${date}\n`;
         }
 
         return new NextResponse(csv, {

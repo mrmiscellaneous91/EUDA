@@ -3,10 +3,15 @@
   "configurations": [
     {
       "name": "euda-landing-page",
-      "runtimeExecutable": "npx",
-      "runtimeArgs": ["next", "dev", "--port", "3001"],
-      "port": 3001,
-      "cwd": "EUDA - Landing Page"
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev", "--prefix", "euda-landing-page"],
+      "port": 3001
+    },
+    {
+      "name": "euda-tax-calculator",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev", "--prefix", "gtm apps/euda-gtm-tax-calculator", "--", "--port", "3002"],
+      "port": 3002
     }
   ]
 }
